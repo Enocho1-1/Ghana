@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ffff00;
+    border-radius: 10px; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #008000;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff0000; 
+    cursor: pointer;
+  }
+
+  main{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Anton', sans-serif;
+    background-color: #e0e0e0;
+  }
+
+  .primary-header, .secondary-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    width: 100vw;
+    padding: 15px;
+}
+
+.primary-header{
+    background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
+    #ff0000 url('imgs/pexels-ali-khalil-6374574.jpg') no-repeat center / cover;
+    background-position-y: 25%;
+}
+
+.secondary-container{
+    background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
+    #ff0000 url('imgs/pexels-photo-9217105.jpeg') no-repeat center / cover;
+}
+
+.primary-header h1, .secondary-container h1{
+   font-size: 150px;
+   color:  #008000;
+   text-shadow: -1px 0 #ffff00, 0 1px #ffff00, 1px 0 #ffff00, 0 -1px #ffff00, 5px 5px #ff0000;
+}
+
+.history-container, .culture-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    height: auto;
+    width: 100vw;
+    margin-top: 200px;
+}
+
+  button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 350px;
+    height: 450px;
+    border: none;
+    border-radius: 5px;
+    filter: grayscale(1);
+    box-shadow: 5px 5px 5px #0d0d0d;
+  }
+
+  button:hover{
+    cursor: pointer;
+    filter: grayscale(0);
+    transition: ease-in 2s;
+  }
+
+  button h1{
+    padding-top: 25px;
+    color: #ff0000;
+    text-shadow: -1px 0 #ffff00, 0 1px #ffff00, 1px 0 #ffff00, 0 -1px #ffff00, 5px 5px #008000;
+    font-size: 2rem;
+  }
+
+#early-history, #independence, #current{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#early-history{
+    background-image: url('imgs/akan-artifact.jpg'); 
+}
+
+#independence{
+    background-image: url('imgs/3f50eec35ff0f6ab0a9984b6926249c7.jpg');
+}
+
+#current{
+    background-image: url('imgs/accra-ghana-Trafic_routier_sur_Liberation_Road_Accra_-_Ghana-1200x900.jpg');
+    background-position: 60%;
+}
+
+.overlay{
+  position: absolute;
+  display: none;
+  width: 100%; 
+  height: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2;
+}
+
+
+.history-modal,.independence-modal,.current-modal,.culture-modal,.art-modal,.sports-modal{
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 600px;
+    width: 950px;
+    background: rgba( 207, 102, 102, 0.45 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    z-index: 3;
+    overflow-y: scroll;
+}
+
+.close{
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    height: 65px;
+    width: auto;
+}
+
+.close img{
+    margin: 10px;
+    height: auto;
+    width: 45px;
+}
+
+.close img:hover{
+    cursor: pointer;
+}
+
+.fullImage{
+width:100%;
+height: 100vh;
+background: rgba(0,0,0,0.9);
+position: fixed;
+top: 0;
+left: 0;
+display: none;
+align-items: center;
+justify-content: center;
+z-index: 4;
+}
+
+.fullImage img{
+width: 600px;
+height: 550px;
+max-width: 700px;
+}
+
+.fullImage span{
+position: absolute;
+top: 5%;
+right: 5%;
+font-size: 30px;
+color: white;
+cursor: pointer;
+}
+
+.contents{
+    margin-top: 100px;
+    padding: 10px;
+    width: auto;
+}
+
+.contents h1{
+    margin: 10px;
+    font-size: 3rem;
+    text-align: center;
+    background: -webkit-linear-gradient(#ff0000, #ffff00,#008000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contents p{
+    color: #F8F0E3;
+    line-height: 50px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.contents img{
+    width:10.625rem;
+    height:10.625rem;
+    margin:0.625rem;
+    border-radius:0.938rem;
+}
+
+.contents img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: ease-in-out 2s;
+}
+
+.img-container{
+    margin: 5px;
+    height: 250px;
+    width: auto;
+}
+
+
+/* Culture Modal image box */
+.image-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 25px;
+    padding: 5px;
+    height:250px;
+    width: auto;
+}

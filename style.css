@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ffff00;
+    border-radius: 10px; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #008000;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff0000; 
+    cursor: pointer;
+  }
+
+  main{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Anton', sans-serif;
+  }
+  
+  video{
+    object-fit: contain;
+    background-position: 60%;
+  }
+  
+  .overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100vw; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 0;
+  }
+  
+  .overlay div{
+    height: 250px;
+    width: 250px;
+  }
+  
+  .home-container, .nav-bar,.side-menu,.close{
+    display: flex;
+    position: absolute;
+  }
+
+  .side-menu{
+    position: fixed;
+    display: none;
+    width: 20%;
+    height: 100vh;
+    top: 0;
+    left: 80%;
+    right: 0;
+    bottom: 0;
+    background: rgba( 0, 128, 0, 0.25 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    z-index: 3;
+  }
+
+  .menu-options{
+    margin-top: 150px;
+    height: 400px;
+    width: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-options a{
+    text-decoration: none;
+    font-size: 55px;
+    margin: 10px;
+    padding: 5px;
+    color: #ffff00;
+    text-shadow: 2px 2px 3px #008000;
+  }
+
+  .menu-options a:hover{
+    cursor: pointer;
+    color: #008000;
+    text-shadow: 0.063em 0.063em #ff0000;
+  }
+  .close{
+    justify-content: flex-start;
+    height: 65px;
+    width: auto;
+  }
+
+  .close img{
+    margin: 10px;
+    height: auto;
+    width: 45px;
+  }
+
+  .home-container{
+    height: 100vh;
+    width: 100vw; 
+    z-index: 1;
+  }
+
+  .nav-bar{
+    justify-content: flex-end;
+    height: auto;
+    width: 100vw;
+    z-index: 2;
+  }
+
+  .main-menu{
+    margin: 20px;
+  }
+
+  .main-menu, .closeBtn:hover,.modalClose:hover{
+    cursor: pointer;
+  }
+
+  .intro-text{
+    margin: 75px;
+    height: 300px;
+    width: 900px;
+    align-self: center;
+    font-size: 45px;
+    line-height: 65px;
+    color: #ffff00;
+    text-shadow: 2px 2px 3px #008000;
+  }
+  
+  .intro-text h1{
+    font-size: 75px;
+    margin-bottom: 15px;
+  }
+
+  .intro-text button {
+    background: #ffff00;
+    color: green;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 25px;
+    border: none;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em #008000;
+   }
+   
+   .intro-text button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+    cursor: pointer;
+   }
+   
+   .intro-text button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+   }
+
+   .explore-modal{
+    position: absolute;
+    display: none;
+    overflow-y: scroll;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 500px;
+    width: 1050px;
+    color: #008000;
+    text-shadow: 0.063em 0.063em #cc0000;
+    background: rgba( 204, 0, 0, 0.25 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    z-index: 4;
+   }
+
+   .explore-text{
+    padding: 10px;
+    font-size: 30px;
+   }
+
+  .landmarks{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 50px
+  }
+
+  .attraction{
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    width: auto;
+  }
+
+  .attraction img{
+    height: auto;
+    width: 250px;
+    margin: 10px;
+    padding: 5px;
+    border-right: 1px solid black;
+  }
+
+
+  .attraction p{
+    font-size: 25px;
+  }
+
+  .pop-overlay{
+    position: fixed;
+    display: none;
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 3;
+  }

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/1200px-Flag_of_Ghana.svg.png">
+    <link rel="stylesheet" href="style-2.css">
+    <title>Culture</title>
+</head>
+<body>
+    <main>
+      <div class="secondary-container">
+        <h1>Culture</h1>
+      </div>
+      <!-- Culture Container -->
+      <div class="culture-container">
+        <div class="box">
+            <img src="imgs/traditions-of-ghana-warrior-king-ladies.jpg" alt="">
+            <h2>Cultural Environment</h2>
+            <div class="culture-button">Read More</div>
+        </div>
+        <div class="fullImage" id="fullImageBox" style="display:none">
+            <img src="imgs/00015764.jpg" alt="photo" id="fullImg">
+            <span onclick="closeFullImg()">X</span>
+          </div>
+        <!-- Culture Modal -->
+        <div class="culture-modal">
+            <div class="close">
+                <img src="icons/close.png" alt="close" class="closeBtn">
+            </div>
+            <div class="contents">
+                <h1 style="text-align: center;">Cultural Environment</h1>
+                <hr>
+                <p>Ghana has a rich indigenous culture. Culturally, the peoples of Ghana have many affinities with their French-speaking neighbours, but each ethnic group has distinctive cultural attributes. In all parts of the country the cultural heritage is closely linked with religion and the institution of chieftaincy. Various festivals and rites are centred on chieftaincy and the family and are occasioned by such events as harvest, marriage, birth, puberty, and death.</p>
+                <div class="image-box">
+                    <img src="imgs/ghana-kings-culture.webp" alt="" title="Kante Kings " onclick="openFullImg(this.src)">
+                    <img src="imgs/adowa.jpg" alt="" title="Traditional Adowa Dance" onclick="openFullImg(this.src)">
+                    <img src="imgs/max1200.jpg" alt="" title="Ghana Drummer" onclick="openFullImg(this.src)">
+                </div>
+            </div>
+        </div>
+        <!-- Culture Modal End -->
+        <div class="box">
+            <img src="imgs/cbe39e8c9fd2e6958341c423a73a7693.jpg" alt="">
+            <h2>The Arts</h2>
+            <div class="art-button">Read More</div>
+        </div>
+        <!-- Art Modal -->
+        <div class="art-modal">
+            <div class="close">
+                <img src="icons/close.png" alt="close" class="closeBtn">
+            </div>
+            <div class="contents">
+                <h1 style="text-align: center;">Ghanaian Art</h1>
+                <hr>
+                <p>Ghana’s arts include dance and music, plastic art (especially pottery and wood carving), gold- and silverwork, and textiles, most notably the richly coloured, handwoven kente cloth of the Akan and Ewe. Local and regional festivals celebrated throughout Ghana provide opportunities for the display of ornamental art, clothing, and chiefly and ceremonial regalia.</p>
+            <div class="image-box">
+                <img src="imgs/Ghanaian-Men.jpg" alt="" title="Ghanian Kente Cloth" onclick="openFullImg(this.src)">
+                <img src="imgs/disk-Asante-akrafokonmu.webp" alt="" title="Asante akrafokonmu (soul washer's badge)" onclick="openFullImg(this.src)">
+                <img src="imgs/DSCF4324.JPG" alt="" title="Ancient Wooden Sculptures" onclick="openFullImg(this.src)">
+            </div>
+            </div>
+        </div>
+        <!-- Art Modal End -->
+        <div class="box">
+            <img src="imgs/Asamoah-Gyan-1.jpg" alt="">
+            <h2>Sports</h2>
+            <div class="sports-button">Read More</div>
+        </div>
+        <!-- Sports Modal -->
+        <div class="sports-modal">
+            <div class="close">
+                <img src="icons/close.png" alt="close" class="closeBtn">
+            </div>
+            <div class="contents">
+                <h1 style="text-align: center;">Sports</h1>
+                <hr>
+                <p>After Ghana became independent in 1957, Pres. Kwame Nkrumah encouraged the development of sports to forge a national identity and to generate international recognition for the emerging country. Political support in the 1960s led to giant strides, especially in athletics (track and field), boxing, and football (soccer). Superb performances at the Commonwealth Games and the All-Africa Games brought such track stars as Leonard Myles-Mills to the sporting world’s attention along with many others.</p>
+                <div class="image-box">
+                    <img src="imgs/track.jpg" alt="" title="Ghana Women's Track Team" onclick="openFullImg(this.src)">
+                    <img src="imgs/soccer.jpg" alt="" title="Ghana Football" onclick="openFullImg(this.src)">
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </main>
+    <script>
+        // Document Event Listener
+        document.addEventListener('click', e => {
+
+            switch(e.target.className){
+                case 'culture-button':
+                    document.querySelector('div.culture-modal').style.display = 'block'
+                    document.querySelector('div.overlay').style.display = 'block'
+                break
+                case 'art-button':
+                    document.querySelector('div.art-modal').style.display = 'block'
+                    document.querySelector('div.overlay').style.display = 'block'
+                break
+                case 'sports-button':
+                    document.querySelector('div.sports-modal').style.display = 'block'
+                    document.querySelector('div.overlay').style.display = 'block'
+                break
+                case "closeBtn":
+                    document.querySelectorAll('img.closeBtn').forEach( element => {
+                        element.parentElement.parentElement.style.display = 'none'
+                        document.querySelector('div.overlay').style.display = 'none'
+                    })
+                
+                break
+        }
+        })
+
+        // Modal Full Image Display
+        const openFullImg = pic => {
+            document.querySelector('#fullImageBox').style.display = 'flex'
+            document.querySelector('#fullImg').src = pic
+        }
+
+        const closeFullImg = () => {
+            document.querySelector('#fullImageBox').style.display = 'none'
+        }
+    </script>
+</body>
+</html>
