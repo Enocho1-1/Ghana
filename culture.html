@@ -11,20 +11,21 @@
 </head>
 <body>
     <main>
-      <div class="secondary-container">
+      <div class="secondary-header">
         <h1>Culture</h1>
       </div>
       <!-- Culture Container -->
       <div class="culture-container">
-        <div class="box">
-            <img src="imgs/traditions-of-ghana-warrior-king-ladies.jpg" alt="">
-            <h2>Cultural Environment</h2>
-            <div class="culture-button">Read More</div>
-        </div>
+         <!-- Scale Image -->
         <div class="fullImage" id="fullImageBox" style="display:none">
             <img src="imgs/00015764.jpg" alt="photo" id="fullImg">
+            <div id="img-caption"></div> 
             <span onclick="closeFullImg()">X</span>
           </div>
+          <!-- Culture Button -->
+            <button class="culture-button" id="culture">
+                <h1>Cultural Environment</h1>
+            </button>
         <!-- Culture Modal -->
         <div class="culture-modal">
             <div class="close">
@@ -41,12 +42,10 @@
                 </div>
             </div>
         </div>
-        <!-- Culture Modal End -->
-        <div class="box">
-            <img src="imgs/cbe39e8c9fd2e6958341c423a73a7693.jpg" alt="">
-            <h2>The Arts</h2>
-            <div class="art-button">Read More</div>
-        </div>
+        <!-- Art Button -->
+        <button class="art-button" id="art">
+            <h1>Art</h1>
+        </button>
         <!-- Art Modal -->
         <div class="art-modal">
             <div class="close">
@@ -63,12 +62,10 @@
             </div>
             </div>
         </div>
-        <!-- Art Modal End -->
-        <div class="box">
-            <img src="imgs/Asamoah-Gyan-1.jpg" alt="">
-            <h2>Sports</h2>
-            <div class="sports-button">Read More</div>
-        </div>
+        <!-- Art Button -->
+           <button class="sports-button" id="sports">
+            <h1>Sports</h1>
+        </button>
         <!-- Sports Modal -->
         <div class="sports-modal">
             <div class="close">
@@ -115,9 +112,10 @@
         })
 
         // Modal Full Image Display
-        const openFullImg = pic => {
+        const openFullImg = (pic, caption) => {
             document.querySelector('#fullImageBox').style.display = 'flex'
             document.querySelector('#fullImg').src = pic
+            document.querySelector('#img-caption').innerHTML = `<p>${caption}</p>`
         }
 
         const closeFullImg = () => {
