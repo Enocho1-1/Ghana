@@ -42,8 +42,9 @@
     padding: 15px;
 }
 
+
 .primary-header{
-    background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
+    background:  linear-gradient(0deg,#e0e0e0,transparent 60%),
     #ff0000 url('imgs/pexels-ali-khalil-6374574.jpg') no-repeat center / cover;
     background-position-y: 25%;
 }
@@ -208,7 +209,7 @@ button h1{
     bottom: 0;
     margin: auto;
     height: 600px;
-    width: 950px;
+    width: 60vw;
     background: rgba( 207, 102, 102, 0.45 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
@@ -216,6 +217,7 @@ button h1{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     z-index: 3;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .close{
@@ -266,12 +268,11 @@ cursor: pointer;
 
 #img-caption{
   display: inline-block;
-  overflow-y: scroll;
   color: #F8F0E3;
   font-size: 1.5rem;
-  margin: 20px;
+  margin: 20px 40px;
   height: 300px;
-  width: 350px;
+  width: 450px;
 }
 
 .contents{
@@ -281,8 +282,8 @@ cursor: pointer;
 }
 
 .contents h1{
-    margin: 10px;
-    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-size: 4rem;
     text-align: center;
     background: -webkit-linear-gradient(#ff0000, #ffff00,#008000);
     -webkit-background-clip: text;
@@ -293,7 +294,7 @@ cursor: pointer;
     color: #F8F0E3;
     line-height: 50px;
     margin-top: 10px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .contents img{
@@ -305,8 +306,8 @@ cursor: pointer;
 
 .contents img:hover{
     cursor: pointer;
-    transform: scale(1.2);
-    transition: ease-in-out 2s;
+    transform: rotate(360deg);
+    transition: ease-in-out 1s;
 }
 
 .img-container{
