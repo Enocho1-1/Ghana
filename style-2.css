@@ -33,6 +33,11 @@
     background-color: #e0e0e0;
   }
 
+  a{
+    text-decoration: none;
+    color: #008000;
+  }
+
   .primary-header, .secondary-header, .tertiary-header{
     display: flex;
     justify-content: center;
@@ -306,9 +311,10 @@ cursor: pointer;
 
 .contents img:hover{
     cursor: pointer;
-    transform: rotate(360deg);
+    transform: scale(1.2);
     transition: ease-in-out 1s;
 }
+
 
 .img-container{
     margin: 5px;
