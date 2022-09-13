@@ -15,9 +15,16 @@
             <h1>Politics</h1>
         </div>
         <div class="politics-container">
-            <button class="govt&pol" id="politics">
+            <button class="govt-button" id="politics">
                 <h1>Government & Politics</h1>
             </button>
+            <!-- Government Modal -->
+            <div class="government-modal" style="display: none;">
+                <div class="close">
+                    <img src="icons/close.png" alt="close" class="closeBtn">
+                </div>
+                <div class="contents"></div>
+            </div>
             <div>
                 <button class="executive-branch" id="executive">
                     <h1>Executive branch</h1>
@@ -32,10 +39,38 @@
                     <h1>Former Presidents</h1>
                 </button>
             </div>
-            <button class="pol-parties" id="parties">
+            <button class="politics-button" id="parties">
                 <h1>Political Parties</h1>
             </button>
+            <div class="politics-modal" style="display: none;">
+                <div class="close">
+                    <img src="icons/close.png" alt="close" class="closeBtn">
+                </div>
+                <div class="contents"></div>
+            </div>
         </div>
+        <div class="overlay"></div>
     </main>
+    <script>
+        document.addEventListener('click', e => {
+            switch(e.target.className){
+                case 'govt-button':
+                    document.querySelector('div.government-modal').style.display = 'block'
+                    document.querySelector('div.overlay').style.display = 'block'
+                break
+                case 'politics-button':
+                    document.querySelector('div.politics-modal').style.display = 'block'
+                    document.querySelector('div.overlay').style.display = 'block'
+                break
+                case "closeBtn":
+                    document.querySelectorAll('img.closeBtn').forEach( element => {
+                        element.parentElement.parentElement.style.display = 'none'
+                        document.querySelector('div.overlay').style.display = 'none'
+                    })
+                   
+                break
+            }
+        })
+    </script>
 </body>
 </html>

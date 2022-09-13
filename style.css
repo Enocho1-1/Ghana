@@ -243,6 +243,6 @@
 @media only screen and (max-width: 600px){
   .video-back{
     width: 100vw;
-    height: auto;
+    height: 100vh;
   }
 }

@@ -205,7 +205,7 @@ button h1{
 }
 
 
-.history-modal,.independence-modal,.current-modal,.culture-modal,.art-modal,.sports-modal{
+.history-modal,.independence-modal,.current-modal,.culture-modal,.art-modal,.sports-modal,.government-modal, .politics-modal{
     position: absolute;
     display: none;
     left: 0;
