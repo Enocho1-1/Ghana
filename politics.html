@@ -15,17 +15,29 @@
             <h1>Politics</h1>
         </div>
         <div class="politics-container">
-            <button class="govt-button" id="politics">
+            <!-- Scale Image -->
+            <div class="fullImage" id="fullImageBox" style="display:none">
+                <img src="imgs/00015764.jpg" alt="photo" id="fullImg">
+                <div id="img-caption"></div> 
+                <span onclick="closeFullImg()">X</span>
+            </div>
+            <!-- Government Button -->
+            <button class="govt-button" id="govt">
                 <h1>Government & Politics</h1>
             </button>
             <!-- Government Modal -->
-            <div class="government-modal" style="display: none;">
+            <div class="modal-style" id="government-modal">
                 <div class="close">
                     <img src="icons/close.png" alt="close" class="closeBtn">
                 </div>
-                <div class="contents"></div>
+                <div class="contents">
+                    <h1>Government & Politics</h1>
+                    <hr> 
+                    <p>Ghana is a unitary presidential constitutional democracy with a parliamentary multi-party system that is dominated by two parties the National Democratic Congress (NDC) and the New Patriotic Party (NPP).</p>
+                    <p>Ghana vacillated between civilian and military governments until January 1993, when the military government gave way to the Fourth Republic of Ghana after presidential and parliamentary elections in late 1992. The 1992 constitution of Ghana divides powers among a Commander-in-Chief of the Ghana Armed Forces (President of Ghana), parliament (Parliament of Ghana), cabinet (Cabinet of Ghana), the council of state (Ghanaian Council of State), and an independent judiciary (Judiciary of Ghana). The Government of Ghana is elected by universal suffrage after every four years.</p>
+                </div>
             </div>
-            <div>
+            <div class="branchs">
                 <button class="executive-branch" id="executive">
                     <h1>Executive branch</h1>
                 </button>
@@ -39,38 +51,85 @@
                     <h1>Former Presidents</h1>
                 </button>
             </div>
+            <!-- Political Party Button -->
             <button class="politics-button" id="parties">
                 <h1>Political Parties</h1>
             </button>
-            <div class="politics-modal" style="display: none;">
+            <!-- Politics Modal -->
+            <div class="modal-style" id="politics-modal">
                 <div class="close">
                     <img src="icons/close.png" alt="close" class="closeBtn">
                 </div>
-                <div class="contents"></div>
+                <div class="contents">
+                    <h1>Political Parties</h1>
+                    <hr>
+                    <img src="imgs/ndc-npp.jpg" alt="" style="float:left;" title="political parties" class="content-img" onclick="openFullImg(this.src, 'The two most pertinent political parties in Ghana are the National Democratic Congress (NDC) and the New Patriotic Party (NPP).')">
+                    <p>Ghana has been dominated by two parties the National Democratic Congress (NDC) and the New Patriotic Party (NPP). Although, there have been other parties that emerged in the past these parties lacked the advocacy of the Ghanaian people and eventually became obsolete.</p>
+                    <hr>
+                    <h1>National Democratic Congress (NDC)</h1>
+                    <img src="imgs/ndc.png" alt="" style="float:right;" title="ndc"  class="content-img"
+                    onclick="openFullImg(this.src, 'The National Democratic Congress (NDC) is a social democratic political party in Ghana, founded by Jerry Rawlings. Rawlings served as a military leader of Ghana. In 1992, the National Democratic Congress led the successful transition to multi-party competition, an example of authoritarian-led democratization.')">
+                    <p>The National Democratic Congress (NDC) is a social democratic political party in Ghana, founded by <a href="#" class="inner-link"><img src="imgs/Jerry_Rawlings.webp">Jerry Rawlings</a>, who served as Head of State of Ghana from 1981 to 1993 and the President of Ghana from 1993 to 2001. Following the formation of the Provisional National Defence Council (PNDC), which ruled Ghana following the military coup d'état of <a href="#" class="inner-link"><img src="imgs/Ignatius_Kutu_Acheampong.jpg">Ignatius Kutu Acheampong's</a> government on 31 December 1981. Consequently, there was pressure from the international community to restore democracy. The NDC was conceived as the ruling party ahead of elections in 1992, in which Rawlings was elected president, and in 1996 Rawlings was re-elected as the NDC candidate. Rawlings' second term ended in 2001.</p>
+                    <hr>
+                    <h1>New Patriotic Party (NPP)</h1>
+                    <img src="imgs/npp.png" alt="" style="float:left;" title="npp"  class="content-img"
+                    onclick="openFullImg(this.src, 'The National Democratic Congress (NDC) is a social democratic political party in Ghana, founded by Jerry Rawlings. Rawlings served as a military leader of Ghana. In 1992, the National Democratic Congress led the successful transition to multi-party competition, an example of authoritarian-led democratization.')">
+                    <p>The New Patriotic Party (NPP) is a center-right and liberal-conservative political party in Ghana. Since the democratization of Ghana in 1992, it has been one of the two dominant parties in Ghanaian politics, with its primary rival being the National Democratic Congress (NDC). <a href="#" class="inner-link"><img src="imgs/kufuor.jpg">John Kufuor</a> of the NPP was President of Ghana from 2001 to 2009 following the Rawlings Administration (NDC). In Ghana presidential terms last for 4 years with a maximum of two terms that can be served, thus Kufor was re-elected on 7 December 2004, and the NPP won 129 out of 230 seats.</p>
+                </div>
             </div>
         </div>
-        <div class="overlay"></div>
+        <div id="overlay"></div>
     </main>
     <script>
+        // Document Event Listeners
         document.addEventListener('click', e => {
             switch(e.target.className){
                 case 'govt-button':
-                    document.querySelector('div.government-modal').style.display = 'block'
-                    document.querySelector('div.overlay').style.display = 'block'
+                    document.querySelector('#government-modal').style.display = 'block'
+                    document.querySelector('#overlay').style.display = 'block'
                 break
                 case 'politics-button':
-                    document.querySelector('div.politics-modal').style.display = 'block'
-                    document.querySelector('div.overlay').style.display = 'block'
+                    document.querySelector('#politics-modal').style.display = 'block'
+                    document.querySelector('#overlay').style.display = 'block'
                 break
                 case "closeBtn":
                     document.querySelectorAll('img.closeBtn').forEach( element => {
                         element.parentElement.parentElement.style.display = 'none'
-                        document.querySelector('div.overlay').style.display = 'none'
+                        document.querySelector('#overlay').style.display = 'none'
                     })
                    
                 break
             }
-        })
+            })
+
+        // Mouse Over Event 
+        document.addEventListener('mouseover', e => {
+                switch(e.target.className){
+                    case 'inner-link':
+                        e.target.firstChild.style.display = 'inherit'
+                    break
+                }
+            })
+        // Mouse Out Event
+        document.addEventListener('mouseout', e => {
+                switch(e.target.className){
+                    case 'inner-link':
+                        e.target.firstChild.style.display = 'none'
+                    break
+                }
+            })
+
+        // Modal Full Image Display
+            const openFullImg = (pic, caption) => {
+                document.querySelector('#fullImageBox').style.display = 'flex'
+                document.querySelector('#fullImg').src = pic
+                document.querySelector('#img-caption').innerHTML = `<p>${caption}</p>`
+            }
+
+            const closeFullImg = () => {
+                document.querySelector('#fullImageBox').style.display = 'none'
+            }
+
     </script>
 </body>
 </html>

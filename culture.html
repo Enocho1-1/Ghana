@@ -21,25 +21,25 @@
             <img src="imgs/00015764.jpg" alt="photo" id="fullImg">
             <div id="img-caption"></div> 
             <span onclick="closeFullImg()">X</span>
-          </div>
+        </div>
           <!-- Culture Button -->
             <button class="culture-button" id="culture">
                 <h1>Cultural Environment</h1>
             </button>
         <!-- Culture Modal -->
-        <div class="culture-modal">
+        <div class="modal-style" id="culture-modal">
             <div class="close">
                 <img src="icons/close.png" alt="close" class="closeBtn">
             </div>
             <div class="contents">
-                <h1 style="text-align: center;">Cultural Environment</h1>
+                <h1>Cultural Environment</h1>
                 <hr>
                 <p>Ghana has a rich indigenous culture. Culturally, the peoples of Ghana have many affinities with their French-speaking neighbours, but each ethnic group has distinctive cultural attributes. In all parts of the country the cultural heritage is closely linked with religion and the institution of chieftaincy. Various festivals and rites are centred on chieftaincy and the family and are occasioned by such events as harvest, marriage, birth, puberty, and death.</p>
-                <div class="image-box">
+                <!-- <div class="image-box">
                     <img src="imgs/ghana-kings-culture.webp" alt="" title="Kante Kings " onclick="openFullImg(this.src)">
                     <img src="imgs/adowa.jpg" alt="" title="Traditional Adowa Dance" onclick="openFullImg(this.src)">
                     <img src="imgs/max1200.jpg" alt="" title="Ghana Drummer" onclick="openFullImg(this.src)">
-                </div>
+                </div> -->
             </div>
         </div>
         <!-- Art Button -->
@@ -47,20 +47,20 @@
             <h1>Literature And The Arts</h1>
         </button>
         <!-- Art Modal -->
-        <div class="art-modal">
+        <div class="modal-style" id="art-modal">
             <div class="close">
                 <img src="icons/close.png" alt="close" class="closeBtn">
             </div>
             <div class="contents">
                 <h1 style="text-align: center;">Literature And The Arts In Ghana</h1>
                 <hr>
-                <img src="imgs/ananse.PNG" alt="" style="float:left;" title="Kwaku Ananse The Spider"  onclick="openFullImg(this.src, 'Kwaku Ananse is a traditional West African fable of a creature, part man, part spider, who spends years collecting all wisdom of the world in a wooden pot. As he tries to hide the pot in a tree he can\'t find a way to place it high up in its branches.')">
+                <img src="imgs/ananse.PNG" alt="" style="float:left;" title="Kwaku Ananse The Spider"  class="content-img" onclick="openFullImg(this.src, 'Kwaku Ananse is a traditional West African fable of a creature, part man, part spider, who spends years collecting all wisdom of the world in a wooden pot. As he tries to hide the pot in a tree he can\'t find a way to place it high up in its branches.')">
                 <p>Ghana has a rich tradition of storytelling. Large audiences still enjoy Ghanaian folktales and epics exalting past chiefs in the country. Kwaku Ananse, a spider, is a popular figure in Ghanaian folklore. There is a small body of written literary works in the country’s indigenous languages. Literature in English is, however, well developed. Efua Sutherlan, Ama Ata Aiddo, and Ayi Kwei Armah are Ghanaian writers who are internationally well-known.</p>
-                <img src="imgs/Sword ornament in the form of a lion_2010.2.McD_.jpg" alt="" style="float:right;" title="Sword ornament"  onclick="openFullImg(this.src, 'In this particular sculpture, the exquisite skill of Ghanaian sculpting is on full display. This Asante sculpture is a sword ornament in the form of a lion.')">
+                <img src="imgs/Sword ornament in the form of a lion_2010.2.McD_.jpg" alt="" style="float:right;" title="Sword ornament"  class="content-img" onclick="openFullImg(this.src, 'In this particular sculpture, the exquisite skill of Ghanaian sculpting is on full display. This Asante sculpture is a sword ornament in the form of a lion.')">
                 <p>Ghana also has a rich tradition of graphic art. Ghanaian craftsmen are wood carving connoisseurs. Stools representing abstract designs or animals are carved out of large logs. These stools become objects of deference after the deaths of their owners. Sculpting is another craft form of Ghana whereby iron and bronze casting techniques are used to produce ceremonial swords, gold weights, and other products. Textiles and pottery are also produced by Ghanaian artisans.</p>
                 <hr>
                 <h1 style="text-align: center;">Performance Arts In Ghana</h1>
-                <img src="imgs/dance-ensemble.jpg" alt="" style="float:left;" title="The Ghana Dance Ensemble "  onclick="openFullImg(this.src, 'This image captures the Ghana Dance Ensemble performing Ahengoro a ceremonial dance of the ethnic Akans.')">
+                <img src="imgs/dance-ensemble.jpg" alt="" style="float:left;" title="The Ghana Dance Ensemble"  class="content-img" onclick="openFullImg(this.src, 'This image captures the Ghana Dance Ensemble performing Ahengoro a ceremonial dance of the ethnic Akans.')">
                 <p>Ghanaian music and dance performances were traditionally held within the confines of religious or political rites. They were also part of wedding ceremonies, initiation ceremonies, and other social situations. Today, while music and dance continue to serve these purposes, they also represent the country’s culture. Such performances are part of cultural festivals and public occasions and are also performed in front of tourists. The Ghana Dance Ensemble of the University of Ghana is a cultural institution of global ingratiation. Today, Ghanaian youth, especially those in urban areas, also favor contemporary music and dance styles. Highlife and Hiplife are the most popular modern music and dance forms in the country. This type of music is usually played in urban nightclubs.</p>
             </div>
         </div>
@@ -69,12 +69,12 @@
             <h1>Sports In Ghana</h1>
         </button>
         <!-- Sports Modal -->
-        <div class="sports-modal">
+        <div class="modal-style" id="sports-modal">
             <div class="close">
                 <img src="icons/close.png" alt="close" class="closeBtn">
             </div>
             <div class="contents">
-                <h1 style="text-align: center;">Sports In Ghana</h1>
+                <h1>Sports In Ghana</h1>
                 <hr>
                 <p>Association football is Ghana’s most popular sport. The country’s national football team known as the Black Stars have taken part in many international football tournaments like the FIFA World Cup and African Cup of Nations. Football is also played informally throughout the nation. Other popular sporting events in Ghana include tennis, basketball, rugby, hockey, golf, etc.</p>
                 <div class="image-box">
@@ -83,7 +83,7 @@
             </div>
         </div>
       </div>
-      <div class="overlay"></div>
+      <div id="overlay"></div>
     </main>
     <script>
         // Document Event Listener
@@ -91,21 +91,21 @@
 
             switch(e.target.className){
                 case 'culture-button':
-                    document.querySelector('div.culture-modal').style.display = 'block'
-                    document.querySelector('div.overlay').style.display = 'block'
+                    document.querySelector('#culture-modal').style.display = 'block'
+                    document.querySelector('#overlay').style.display = 'block'
                 break
                 case 'art-button':
-                    document.querySelector('div.art-modal').style.display = 'block'
-                    document.querySelector('div.overlay').style.display = 'block'
+                    document.querySelector('#art-modal').style.display = 'block'
+                    document.querySelector('#overlay').style.display = 'block'
                 break
                 case 'sports-button':
-                    document.querySelector('div.sports-modal').style.display = 'block'
-                    document.querySelector('div.overlay').style.display = 'block'
+                    document.querySelector('#sports-modal').style.display = 'block'
+                    document.querySelector('#overlay').style.display = 'block'
                 break
                 case "closeBtn":
                     document.querySelectorAll('img.closeBtn').forEach( element => {
                         element.parentElement.parentElement.style.display = 'none'
-                        document.querySelector('div.overlay').style.display = 'none'
+                        document.querySelector('#overlay').style.display = 'none'
                     })
                 
                 break

@@ -1,105 +1,46 @@
+/* Base Styles */
+
 *{
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffff00;
+  border-radius: 10px; 
+}
   
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #ffff00;
-    border-radius: 10px; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #008000;
-    border-radius: 10px;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #008000;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0000; 
+  cursor: pointer;
+}
+
+main{
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Anton', sans-serif;
+  background-color: #e0e0e0;
+}
+
+a{
+  text-decoration: none;
+  color: #008000;
+}
+
   
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #ff0000; 
-    cursor: pointer;
-  }
-
-  main{
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    font-family: 'Anton', sans-serif;
-    background-color: #e0e0e0;
-  }
-
-  a{
-    text-decoration: none;
-    color: #008000;
-  }
-
-  .primary-header, .secondary-header, .tertiary-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 1000px;
-    width: 100vw;
-    padding: 15px;
-}
-
-
-.primary-header{
-    background:  linear-gradient(0deg,#e0e0e0,transparent 60%),
-    #ff0000 url('imgs/pexels-ali-khalil-6374574.jpg') no-repeat center / cover;
-    background-position-y: 25%;
-}
-
-.secondary-header{
-    background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
-    #ff0000 url('imgs/pexels-photo-9217105.jpeg') no-repeat center / cover;
-}
-
-.tertiary-header{
-  background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
-  #e0e0e0 url('imgs/Coat_of_arms_of_Ghana.svg.png') no-repeat center / contain;
-}
-
-.primary-header h1, .secondary-header h1, .tertiary-header h1{
-   font-size: 150px;
-   color:  #008000;
-   text-shadow: -1px 0 #ffff00, 0 1px #ffff00, 1px 0 #ffff00, 0 -1px #ffff00, 5px 5px #ff0000;
-}
-
-.history-container, .culture-container, .politics-container{
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    width: 100vw;
-    margin-top: 200px;
-}
-
-.history-container, .culture-container{
-  justify-content: space-around; 
-}
-
-.politics-container{
-  justify-content: center; 
-}
-
-.politics-container div{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  height: auto;
-  width: 600px;
-}
-
-.politics-container div button{
-  height: 200px;
-  width: 200px;
-}
-
 button{
   display: flex;
   justify-content: center;
@@ -126,86 +67,72 @@ button h1{
   font-size: 2rem;
 }
 
-#early-history, #independence, #current, #culture, #art, #sports{
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#early-history{
-    background-image: url('imgs/akan-artifact.jpg'); 
-}
-
-#independence{
-    background-image: url('imgs/3f50eec35ff0f6ab0a9984b6926249c7.jpg');
-}
-
-#current{
-    background-image: url('imgs/accra-ghana-Trafic_routier_sur_Liberation_Road_Accra_-_Ghana-1200x900.jpg');
-    background-position: 60%;
-}
-
-#culture{
-  background-image: url('imgs/traditions-of-ghana-warrior-king-ladies.jpg');
-  background-position: 60%;
-}
-
-#art{
-  background-image: url('imgs/cbe39e8c9fd2e6958341c423a73a7693.jpg');
-}
-
-#sports{
-  background-image: url('imgs/Asamoah-Gyan-1.jpg');
-  background-position: 60%;
-}
-
-#politics{
-  background-image: url('imgs/akufo.jpg');
-  background-position: 60%;
-}
-
-#executive{
-  background-image: url('imgs/Seal_of_the_Presidency_of_the_Republic_of_Ghana.svg.png');
-  background-size: contain;
-}
-
-#legislative{
-  background-image: url('imgs/Ghana_Parliament_Emblem.png');
-  background-size: contain;
-}
-
-#judicial{
-  background-image: url('imgs/supreme.jpg');
-  background-size: cover;
-  background-position: 60%;
-}
-
-#parties{
-  background-image: url('imgs/politicalparty.jpg');
-  background-size: contain;
-  background-position: 60%;
+/* Header Containers */
+.primary-header, .secondary-header, .tertiary-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+  width: 100vw;
+  padding: 15px;
 }
 
 
-#presidents{
-  background-image: url('imgs/former-pres.jpg');
-  background-size: contain;
+.primary-header{
+  background:  linear-gradient(0deg,#e0e0e0,transparent 60%),
+  #ff0000 url('imgs/pexels-ali-khalil-6374574.jpg') no-repeat center / cover;
+  background-position-y: 25%;
 }
 
-.overlay{
-  position: absolute;
-  display: none;
-  width: 100%; 
-  height: 100%; 
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.9);
-  z-index: 2;
+.secondary-header{
+  background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
+  #ff0000 url('imgs/pexels-photo-9217105.jpeg') no-repeat center / cover;
 }
 
+.tertiary-header{
+background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
+#e0e0e0 url('imgs/Coat_of_arms_of_Ghana.svg.png') no-repeat center / contain;
+}
 
-.history-modal,.independence-modal,.current-modal,.culture-modal,.art-modal,.sports-modal,.government-modal, .politics-modal{
+.primary-header h1, .secondary-header h1, .tertiary-header h1{
+  font-size: 150px;
+  color:  #008000;
+  text-shadow: -1px 0 #ffff00, 0 1px #ffff00, 1px 0 #ffff00, 0 -1px #ffff00, 5px 5px #ff0000;
+}
+
+/* Content Containers & Elements */
+.history-container, .culture-container, .politics-container{
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100vw;
+  margin-top: 200px;
+}
+
+.history-container, .culture-container{
+  justify-content: space-around; 
+}
+
+.politics-container{
+  justify-content: center; 
+}
+
+.branchs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: auto;
+  width: 600px;
+}
+
+.politics-container div button{
+  height: 200px;
+  width: 200px;
+}
+
+/* Modal & Elements */
+.modal-style{
     position: absolute;
     display: none;
     left: 0;
@@ -227,10 +154,9 @@ button h1{
 
 .close{
     display: flex;
-    position: absolute;
     justify-content: flex-start;
-    height: 65px;
-    width: auto;
+    height: auto;
+    width: 100vw;
 }
 
 .close img{
@@ -271,15 +197,6 @@ color: white;
 cursor: pointer;
 }
 
-#img-caption{
-  display: inline-block;
-  color: #F8F0E3;
-  font-size: 1.5rem;
-  margin: 20px 40px;
-  height: 300px;
-  width: 450px;
-}
-
 .contents{
     margin-top: 100px;
     padding: 10px;
@@ -302,26 +219,126 @@ cursor: pointer;
     font-size: 1.8rem;
 }
 
-.contents img{
+.content-img{
     width:10.625rem;
     height:10.625rem;
     margin:0.625rem;
     border-radius:0.938rem;
 }
 
-.contents img:hover{
+.content-img:hover{
     cursor: pointer;
     transform: scale(1.2);
     transition: ease-in-out 1s;
 }
 
-
+.inner-link img{
+  position: absolute;
+  margin-top: 45px;
+  display: none;
+  height: 175px;
+  width: 200px;
+}
 .img-container{
     margin: 5px;
     height: 250px;
     width: auto;
 }
 
+/* ID Selectors */
+#early-history, 
+#independence, 
+#current, 
+#culture, 
+#art, 
+#sports{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#early-history{
+    background-image: url('imgs/akan-artifact.jpg'); 
+}
+
+#independence{
+    background-image: url('imgs/3f50eec35ff0f6ab0a9984b6926249c7.jpg');
+}
+
+#current{
+    background-image: url('imgs/accra-ghana-Trafic_routier_sur_Liberation_Road_Accra_-_Ghana-1200x900.jpg');
+    background-position: 60%;
+}
+
+#culture{
+  background-image: url('imgs/traditions-of-ghana-warrior-king-ladies.jpg');
+  background-position: 60%;
+}
+
+#art{
+  background-image: url('imgs/cbe39e8c9fd2e6958341c423a73a7693.jpg');
+}
+
+#sports{
+  background-image: url('imgs/Asamoah-Gyan-1.jpg');
+  background-position: 60%;
+}
+
+#govt{
+  background-image: url('imgs/akufo.jpg');
+  background-position: 60%;
+}
+
+#executive{
+  background-image: url('imgs/Seal_of_the_Presidency_of_the_Republic_of_Ghana.svg.png');
+  background-size: contain;
+}
+
+#legislative{
+  background-image: url('imgs/Ghana_Parliament_Emblem.png');
+  background-size: contain;
+}
+
+#judicial{
+  background-image: url('imgs/supreme.jpg');
+  background-size: cover;
+  background-position: 60%;
+}
+
+#parties{
+  background-image: url('imgs/politicalparty.jpg');
+  background-size: contain;
+  background-position: 60%;
+}
+
+
+#presidents{
+  background-image: url('imgs/former-pres.jpg');
+  background-size: contain;
+}
+
+#overlay{
+  position: absolute;
+  display: none;
+  width: 100%; 
+  height: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2;
+}
+
+
+/* Full Size Image Caption */
+#img-caption{
+  display: inline-block;
+  color: #F8F0E3;
+  font-size: 1.5rem;
+  margin: 20px 40px;
+  height: 300px;
+  width: 450px;
+}
 
 /* Culture Modal image box */
 .image-box{
