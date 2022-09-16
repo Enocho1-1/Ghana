@@ -68,7 +68,7 @@ button h1{
 }
 
 /* Header Containers */
-.primary-header, .secondary-header, .tertiary-header{
+:is(.primary-header, .secondary-header, .tertiary-header){
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,7 +94,7 @@ background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
 #e0e0e0 url('imgs/Coat_of_arms_of_Ghana.svg.png') no-repeat center / contain;
 }
 
-.primary-header h1, .secondary-header h1, .tertiary-header h1{
+:is(.primary-header, .secondary-header, .tertiary-header) h1{
   font-size: 150px;
   color:  #008000;
   text-shadow: -1px 0 #ffff00, 0 1px #ffff00, 1px 0 #ffff00, 0 -1px #ffff00, 5px 5px #ff0000;
@@ -234,7 +234,6 @@ cursor: pointer;
 
 .inner-link img{
   position: absolute;
-  margin-top: 45px;
   display: none;
   height: 175px;
   width: 200px;
@@ -246,12 +245,7 @@ cursor: pointer;
 }
 
 /* ID Selectors */
-#early-history, 
-#independence, 
-#current, 
-#culture, 
-#art, 
-#sports{
+:is(#early-history, #independence, #current, #culture, #art, #sports){
   background-repeat: no-repeat;
   background-size: cover;
 }
