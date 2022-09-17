@@ -68,7 +68,7 @@ button h1{
 }
 
 /* Header Containers */
-:is(.primary-header, .secondary-header, .tertiary-header){
+div:is(.primary-header, .secondary-header, .tertiary-header){
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,14 +94,14 @@ background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
 #e0e0e0 url('imgs/Coat_of_arms_of_Ghana.svg.png') no-repeat center / contain;
 }
 
-:is(.primary-header, .secondary-header, .tertiary-header) h1{
+div:is(.primary-header, .secondary-header, .tertiary-header) h1{
   font-size: 150px;
   color:  #008000;
   text-shadow: -1px 0 #ffff00, 0 1px #ffff00, 1px 0 #ffff00, 0 -1px #ffff00, 5px 5px #ff0000;
 }
 
 /* Content Containers & Elements */
-.history-container, .culture-container, .politics-container{
+div:is(.history-container, .culture-container, .politics-container){
   display: flex;
   flex-direction: row;
   height: auto;
@@ -126,7 +126,7 @@ background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
   width: 600px;
 }
 
-.politics-container div button{
+.branchs button{
   height: 200px;
   width: 200px;
 }
