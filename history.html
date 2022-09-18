@@ -17,7 +17,7 @@
         <!-- History Container -->
         <div class="history-container">
             <!-- Scale Image -->
-            <div class="fullImage" id="fullImageBox" style="display:none">
+            <div class="fullImage" id="fullImageBox">
                 <img src="imgs/00015764.jpg" alt="photo" id="fullImg">
                 <div id="img-caption">
                     <p class="caption"></p>
@@ -29,7 +29,7 @@
                 <h1>Early History</h1>
             </button>
             <!-- Early History Modal -->
-            <div class="modal-style" id="history-modal">
+            <div class="modal-style">
             <div class="close">
                 <img src="icons/close.png" alt="close" class="closeBtn">
             </div>
@@ -66,7 +66,7 @@
                 <h1>Independence</h1>
             </button>
             <!-- Independence Modal -->
-            <div class="modal-style" id="independence-modal">
+            <div class="modal-style">
                 <div class="close">
                     <img src="icons/close.png" alt="close" class="closeBtn">
                 </div>
@@ -92,7 +92,7 @@
                 <h1>Ghana Today</h1>
             </button>
             <!-- Current Modal -->
-            <div class="modal-style" id="current-modal">
+            <div class="modal-style">
                 <div class="close">
                     <img src="icons/close.png" alt="close" class="closeBtn">
                 </div>
@@ -122,18 +122,18 @@
     <script>
         // Document Event Listener
         document.addEventListener('click', e => {
-
+            let next_sibling = e.target.nextElementSibling
             switch(e.target.className){
                 case 'history-button':
-                    document.querySelector('#history-modal').style.display = 'block'
+                    next_sibling.style.display = 'block'
                     document.querySelector('#overlay').style.display = 'block'
                 break
                 case 'independence-button':
-                    document.querySelector('#independence-modal').style.display = 'block'
+                    next_sibling.style.display = 'block'
                     document.querySelector('#overlay').style.display = 'block'
                 break
                 case 'current-button':
-                    document.querySelector('#current-modal').style.display = 'block'
+                    next_sibling.style.display = 'block'
                     document.querySelector('#overlay').style.display = 'block'
                 break
                 case "closeBtn":

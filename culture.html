@@ -17,7 +17,7 @@
       <!-- Culture Container -->
       <div class="culture-container">
          <!-- Scale Image -->
-        <div class="fullImage" id="fullImageBox" style="display:none">
+        <div class="fullImage" id="fullImageBox">
             <img src="imgs/00015764.jpg" alt="photo" id="fullImg">
             <div id="img-caption"></div> 
             <span onclick="closeFullImg()">X</span>
@@ -27,7 +27,7 @@
                 <h1>Cultural Environment</h1>
             </button>
         <!-- Culture Modal -->
-        <div class="modal-style" id="culture-modal">
+        <div class="modal-style">
             <div class="close">
                 <img src="icons/close.png" alt="close" class="closeBtn">
             </div>
@@ -47,7 +47,7 @@
             <h1>Literature And The Arts</h1>
         </button>
         <!-- Art Modal -->
-        <div class="modal-style" id="art-modal">
+        <div class="modal-style">
             <div class="close">
                 <img src="icons/close.png" alt="close" class="closeBtn">
             </div>
@@ -69,7 +69,7 @@
             <h1>Sports In Ghana</h1>
         </button>
         <!-- Sports Modal -->
-        <div class="modal-style" id="sports-modal">
+        <div class="modal-style">
             <div class="close">
                 <img src="icons/close.png" alt="close" class="closeBtn">
             </div>
@@ -88,18 +88,18 @@
     <script>
         // Document Event Listener
         document.addEventListener('click', e => {
-
+            let next_sibling = e.target.nextElementSibling
             switch(e.target.className){
                 case 'culture-button':
-                    document.querySelector('#culture-modal').style.display = 'block'
+                    next_sibling.style.display = 'block'
                     document.querySelector('#overlay').style.display = 'block'
                 break
                 case 'art-button':
-                    document.querySelector('#art-modal').style.display = 'block'
+                    next_sibling.style.display = 'block'
                     document.querySelector('#overlay').style.display = 'block'
                 break
                 case 'sports-button':
-                    document.querySelector('#sports-modal').style.display = 'block'
+                    next_sibling.style.display = 'block'
                     document.querySelector('#overlay').style.display = 'block'
                 break
                 case "closeBtn":

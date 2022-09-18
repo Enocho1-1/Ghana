@@ -67,6 +67,22 @@ button h1{
   font-size: 2rem;
 }
 
+table {
+  margin: 5px;
+  padding: 5px;
+  width: 100%;
+  font-size: 1.5rem;
+  background: -webkit-linear-gradient(#ff0000, #ffff00,#008000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+
 /* Header Containers */
 div:is(.primary-header, .secondary-header, .tertiary-header){
   display: flex;
@@ -169,32 +185,33 @@ div:is(.history-container, .culture-container, .politics-container){
     cursor: pointer;
 }
 
+
 .fullImage{
-width:100%;
-height: 100vh;
-background: rgba(0,0,0,0.9);
-position: fixed;
-top: 0;
-left: 0;
-display: none;
-align-items: center;
-justify-content: center;
-z-index: 4;
+  width:100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
 }
 
 .fullImage img{
-width: 600px;
-height: 550px;
-max-width: 700px;
+  width: 600px;
+  height: 550px;
+  max-width: 700px;
 }
 
 .fullImage span{
-position: absolute;
-top: 5%;
-right: 5%;
-font-size: 30px;
-color: white;
-cursor: pointer;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
 }
 
 .contents{
@@ -219,6 +236,10 @@ cursor: pointer;
     font-size: 1.8rem;
 }
 
+div:has(img){
+  float: left;
+}
+
 .content-img{
     width:10.625rem;
     height:10.625rem;
@@ -238,11 +259,13 @@ cursor: pointer;
   height: 175px;
   width: 200px;
 }
+
 .img-container{
     margin: 5px;
     height: 250px;
     width: auto;
 }
+
 
 /* ID Selectors */
 :is(#early-history, #independence, #current, #culture, #art, #sports){
@@ -323,6 +346,14 @@ cursor: pointer;
   z-index: 2;
 }
 
+#executive-table{
+  display: block;
+  /* justify-content: center;
+  align-items: center; */
+  height: auto;
+  width: auto;
+  margin: 1.5rem;
+}
 
 /* Full Size Image Caption */
 #img-caption{
