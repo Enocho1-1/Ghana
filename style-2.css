@@ -232,7 +232,7 @@ div:is(.history-container, .culture-container, .politics-container){
 .contents p{
     color: #F8F0E3;
     line-height: 50px;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 1.8rem;
 }
 
@@ -253,12 +253,14 @@ div:has(img){
     transition: ease-in-out 1s;
 }
 
+
 .inner-link img{
   position: absolute;
   display: none;
   height: 175px;
   width: 200px;
 }
+
 
 .img-container{
     margin: 5px;
