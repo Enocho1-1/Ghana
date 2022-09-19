@@ -227,6 +227,7 @@ cursor: pointer;
 }
 
 .content-img{
+  float: left;
     width:10.625rem;
     height:10.625rem;
     margin:0.625rem;
@@ -241,10 +242,12 @@ cursor: pointer;
 
 .inner-link img{
   position: absolute;
+  float: left;
   display: none;
   height: 175px;
   width: 200px;
 }
+
 .img-container{
     margin: 5px;
     height: 250px;
@@ -263,6 +266,7 @@ table{
   -webkit-text-fill-color: transparent;
 }
 
+
   td, th {
     border: 1px solid #F8F0E3;
     padding: 8px;
@@ -272,6 +276,7 @@ table{
     height: 100px;
     width: 75px;
   }
+
 
 /* ID Selectors */
 :is(#early-history, #independence, #current, #culture, #art, #sports){
