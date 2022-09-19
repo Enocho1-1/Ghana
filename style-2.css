@@ -67,24 +67,8 @@ button h1{
   font-size: 2rem;
 }
 
-table {
-  margin: 5px;
-  padding: 5px;
-  width: 100%;
-  font-size: 1.5rem;
-  background: -webkit-linear-gradient(#ff0000, #ffff00,#008000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  padding: 8px;
-}
-
-
 /* Header Containers */
-div:is(.primary-header, .secondary-header, .tertiary-header){
+:is(.primary-header, .secondary-header, .tertiary-header){
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,14 +94,14 @@ background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
 #e0e0e0 url('imgs/Coat_of_arms_of_Ghana.svg.png') no-repeat center / contain;
 }
 
-div:is(.primary-header, .secondary-header, .tertiary-header) h1{
+:is(.primary-header, .secondary-header, .tertiary-header) h1{
   font-size: 150px;
   color:  #008000;
   text-shadow: -1px 0 #ffff00, 0 1px #ffff00, 1px 0 #ffff00, 0 -1px #ffff00, 5px 5px #ff0000;
 }
 
 /* Content Containers & Elements */
-div:is(.history-container, .culture-container, .politics-container){
+.history-container, .culture-container, .politics-container{
   display: flex;
   flex-direction: row;
   height: auto;
@@ -142,7 +126,7 @@ div:is(.history-container, .culture-container, .politics-container){
   width: 600px;
 }
 
-.branchs button{
+.politics-container div button{
   height: 200px;
   width: 200px;
 }
@@ -157,7 +141,7 @@ div:is(.history-container, .culture-container, .politics-container){
     bottom: 0;
     margin: auto;
     height: 600px;
-    width: 60vw;
+    width: 75vw;
     background: rgba( 207, 102, 102, 0.45 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
@@ -185,33 +169,32 @@ div:is(.history-container, .culture-container, .politics-container){
     cursor: pointer;
 }
 
-
 .fullImage{
-  width:100%;
-  height: 100vh;
-  background: rgba(0,0,0,0.9);
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 4;
+width:100%;
+height: 100vh;
+background: rgba(0,0,0,0.9);
+position: fixed;
+top: 0;
+left: 0;
+display: none;
+align-items: center;
+justify-content: center;
+z-index: 4;
 }
 
 .fullImage img{
-  width: 600px;
-  height: 550px;
-  max-width: 700px;
+width: 600px;
+height: 550px;
+max-width: 700px;
 }
 
 .fullImage span{
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
+position: absolute;
+top: 5%;
+right: 5%;
+font-size: 30px;
+color: white;
+cursor: pointer;
 }
 
 .contents{
@@ -220,24 +203,27 @@ div:is(.history-container, .culture-container, .politics-container){
     width: auto;
 }
 
+.contents h1, h2{
+  text-align: center;
+  background: -webkit-linear-gradient(#ff0000, #ffff00,#008000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .contents h1{
-    margin-bottom: 3rem;
+    margin: 1rem;
     font-size: 4rem;
-    text-align: center;
-    background: -webkit-linear-gradient(#ff0000, #ffff00,#008000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+}
+
+.contents h2{
+  margin: 2rem;
+  font-size: 2rem;
 }
 
 .contents p{
     color: #F8F0E3;
     line-height: 50px;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 1.8rem;
-}
-
-div:has(img){
-  float: left;
 }
 
 .content-img{
@@ -253,21 +239,39 @@ div:has(img){
     transition: ease-in-out 1s;
 }
 
-
 .inner-link img{
   position: absolute;
   display: none;
   height: 175px;
   width: 200px;
 }
-
-
 .img-container{
     margin: 5px;
     height: 250px;
     width: auto;
 }
 
+
+table{
+  margin:25px 0;
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+  border-collapse: collapse;
+  background: -webkit-linear-gradient(#ff0000, #ffff00,#008000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+  td, th {
+    border: 1px solid #F8F0E3;
+    padding: 8px;
+  }
+
+  td img{
+    height: 100px;
+    width: 75px;
+  }
 
 /* ID Selectors */
 :is(#early-history, #independence, #current, #culture, #art, #sports){
@@ -348,14 +352,6 @@ div:has(img){
   z-index: 2;
 }
 
-#executive-table{
-  display: block;
-  /* justify-content: center;
-  align-items: center; */
-  height: auto;
-  width: auto;
-  margin: 1.5rem;
-}
 
 /* Full Size Image Caption */
 #img-caption{
