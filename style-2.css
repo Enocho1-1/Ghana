@@ -277,6 +277,9 @@ table{
     width: 75px;
   }
 
+  td img:hover{
+    cursor: pointer;
+  }
 
 /* ID Selectors */
 :is(#early-history, #independence, #current, #culture, #art, #sports){
