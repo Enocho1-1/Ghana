@@ -140,6 +140,7 @@ background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
     top: 0;
     bottom: 0;
     margin: auto;
+    padding: 25px 35px;
     height: 600px;
     width: 75vw;
     background: rgba( 207, 102, 102, 0.45 );
@@ -240,12 +241,19 @@ cursor: pointer;
     transition: ease-in-out 1s;
 }
 
-.inner-link img{
-  position: absolute;
-  float: left;
+
+.inner-link + img{
+  height: 150px;
+  width: 125px;
+}
+
+.hide{
   display: none;
-  height: 175px;
-  width: 200px;
+}
+
+.inner-link:hover + .hide{
+  display: inline-block;
+  position: absolute;
 }
 
 .img-container{
