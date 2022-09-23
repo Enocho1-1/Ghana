@@ -244,7 +244,7 @@ cursor: pointer;
 
 .inner-link + img{
   height: 150px;
-  width: 100px;
+  width: 100 px;
 }
 
 .hide{
@@ -323,8 +323,8 @@ table{
 }
 
 #govt{
-  background-image: url('imgs/akufo.jpg');
-  background-position: 60%;
+  background-image: url('imgs/ghana-politics-1483829828-9429.jpg');
+  background-position: 40%;
 }
 
 #executive{
