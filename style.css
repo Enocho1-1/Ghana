@@ -248,9 +248,108 @@
 
 
 /* Media Query */
+/* Small Mobile Phone Media Query */
 @media only screen and (max-width: 37.5rem){
+
   .video-back{
-    width: 100vw;
     height: 100vh;
   }
+
+  .side-menu{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .menu-options{
+    margin-top: 6.25rem ;
+    height: 25rem;
+    padding: 0.625rem;
+  }
+
+  .menu-options a{
+    margin: 1.25rem;
+    padding: 0.313rem;
+  }
+
+  .nav-bar{
+    justify-content: flex-end;
+    height: 4.688rem;
+    width: 100vw;
+    z-index: 2;
+  }
+
+  .main-menu{
+    margin: 1rem;
+  }
+
+  .overlay{
+    height: 100vh;
+  }
+  
+  .intro-text h1{
+    font-size: 2.5rem;
+  }
+
+  .intro-text{
+    align-self: flex-start;
+    height: auto;
+    width: auto;
+    font-size: 1.563rem;
+    line-height: 3.125rem;
+   
+  }
+  
+  .intro-text button {
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 1.563rem;
+   }
+
+      
+   .explore-modal{
+    height: 31.25rem;
+    width: 100vw;
+   }
+
+   .explore-text{
+    padding: 0.625rem;
+    font-size: 1.5rem;
+   }
+
+   .landmarks{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 1.2rem;
+  }
+
+   .attraction{
+    margin: 1.563rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: auto;
+  }
+
+  .attraction h1, h2{
+    font-size: 1.563rem;
+  }
+
+
+  .attraction p{
+    font-size: 1.5rem;
+  }
+
+  .attraction img{
+    height: auto;
+    width: auto;
+    padding: 0.313rem;
+    border-right: none;
+  }
+
 }
