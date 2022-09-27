@@ -4,19 +4,19 @@
   }
   
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 0.625rem;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
     background: #ffff00;
-    border-radius: 10px; 
+    border-radius: 0.625rem; 
   }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #008000;
-    border-radius: 10px;
+    border-radius: 0.625rem;
   }
   
   /* Handle on hover */
@@ -48,13 +48,17 @@
     left: 0;
     right: 0;
     bottom: 0;
+<<<<<<< HEAD
     background-color: 	rgb(212,235,242,0.3);
+=======
+    background-color: rgb(193,225,236,0.3);
+>>>>>>> ffb7355d56017f817fdb87d5bfd25fc1b5598c6a
     z-index: 0;
   }
   
   .overlay div{
-    height: 250px;
-    width: 250px;
+    height: 15.625rem;
+    width: 15.625rem;
   }
   
   :is(.home-container, .nav-bar,.side-menu,.close){
@@ -71,17 +75,17 @@
     left: 80%;
     right: 0;
     bottom: 0;
-    background: rgba( 0, 128, 0, 0.25 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+    background: rgb(237,237,237, 0.25 );
+    backdrop-filter: blur( 0.25rem );
+    -webkit-backdrop-filter: blur( 0.25 );
     z-index: 3;
   }
 
   .menu-options{
-    margin-top: 150px;
-    height: 400px;
+    margin-top: 9.375rem ;
+    height: 25rem;
     width: auto;
-    padding: 10px;
+    padding: 0.625rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,11 +93,11 @@
 
   .menu-options a{
     text-decoration: none;
-    font-size: 55px;
-    margin: 10px;
-    padding: 5px;
+    font-size: 3.438rem;
+    margin: 0.625rem;
+    padding: 0.313rem;
     color: #ffff00;
-    text-shadow: 2px 2px 3px #008000;
+    text-shadow: 0.125rem 0.125rem 0.188rem #008000;
   }
 
   .menu-options a:hover{
@@ -104,14 +108,14 @@
 
   .close{
     justify-content: flex-start;
-    height: 65px;
+    height: 4.063rem;
     width: auto;
   }
 
   .close img{
-    margin: 10px;
+    margin: 0.625rem;
     height: auto;
-    width: 45px;
+    width: 2.813rem;
   }
 
   .home-container{
@@ -128,7 +132,7 @@
   }
 
   .main-menu{
-    margin: 20px;
+    margin: 1.25rem;
   }
 
  :is(.main-menu, .closeBtn,.modalClose):hover {
@@ -136,19 +140,19 @@
   }
 
   .intro-text{
-    margin: 75px;
-    height: 300px;
-    width: 900px;
+    margin: 4.688rem;
+    height: 18.75rem;
+    width: 56.25rem;
     align-self: center;
-    font-size: 45px;
-    line-height: 65px;
+    font-size: 2.813rem;
+    line-height: 4.063rem;
     color: #ffff00;
-    text-shadow: 2px 2px 3px #008000;
+    text-shadow: 0.125rem 0.125rem 0.188rem #008000;
   }
   
   .intro-text h1{
-    font-size: 75px;
-    margin-bottom: 15px;
+    font-size: 4.688rem;
+    margin-bottom: 0.938rem;
   }
 
   .intro-text button {
@@ -157,7 +161,7 @@
     font-family: inherit;
     padding: 0.6em 1.3em;
     font-weight: 900;
-    font-size: 25px;
+    font-size: 1.563rem;
     border: none;
     border-radius: 0.4em;
     box-shadow: 0.1em 0.1em #008000;
@@ -174,6 +178,7 @@
     box-shadow: 0.05em 0.05em;
    }
 
+   
    .explore-modal{
     position: absolute;
     display: none;
@@ -183,47 +188,52 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    height: 500px;
-    width: 1050px;
+    height: 31.25rem;
+    width: 85vw;
     color: #F8F0E3;
     text-shadow: 0.063em 0.063em #cc0000;
-    background: rgba( 207, 102, 102, 0.45 );
-    backdrop-filter: blur( 3.5px );
-    -webkit-backdrop-filter: blur( 3.5px );
-    border-radius: 10px;
+    background: rgba( 207, 102, 102, 0.25 );
+    backdrop-filter: blur( 0.25rem  );
+    -webkit-backdrop-filter: blur( 0.25rem  );
+    border-radius: 0.625rem;
     z-index: 4;
    }
 
+   .explore-head {
+    text-align:center;
+    margin-top: 4.688rem;
+    font-size: 2.813rem;
+   }
+
    .explore-text{
-    padding: 10px;
-    font-size: 30px;
+    padding: 0.625rem;
+    font-size: 1.875rem;
    }
 
   .landmarks{
     display: flex;
     flex-direction: column;
     height: auto;
-    margin-top: 50px
+    margin-top: 3.125rem;
   }
 
   .attraction{
     display: flex;
     flex-direction: row;
-    height: 300px;
+    height: 18.75rem;
     width: auto;
   }
 
   .attraction img{
     height: auto;
-    width: 250px;
-    margin: 10px;
-    padding: 5px;
-    border-right: 1px solid black;
+    width: 15.625rem;
+    margin: 0.625rem;
+    padding: 0.313rem;
   }
 
 
   .attraction p{
-    font-size: 25px;
+    font-size: 1.563rem;
   }
 
   .pop-overlay{
@@ -241,9 +251,108 @@
 
 
 /* Media Query */
-@media only screen and (max-width: 600px){
+/* Small Mobile Phone Media Query */
+@media only screen and (max-width: 37.5rem){
+
   .video-back{
-    width: 100vw;
     height: 100vh;
   }
+
+  .side-menu{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .menu-options{
+    margin-top: 6.25rem ;
+    height: 25rem;
+    padding: 0.625rem;
+  }
+
+  .menu-options a{
+    margin: 1.25rem;
+    padding: 0.313rem;
+  }
+
+  .nav-bar{
+    justify-content: flex-end;
+    height: 4.688rem;
+    width: 100vw;
+    z-index: 2;
+  }
+
+  .main-menu{
+    margin: 1rem;
+  }
+
+  .overlay{
+    height: 100vh;
+  }
+  
+  .intro-text h1{
+    font-size: 2.5rem;
+  }
+
+  .intro-text{
+    align-self: flex-start;
+    height: auto;
+    width: auto;
+    font-size: 1.563rem;
+    line-height: 3.125rem;
+   
+  }
+  
+  .intro-text button {
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 1.563rem;
+   }
+
+      
+   .explore-modal{
+    height: 31.25rem;
+    width: 100vw;
+   }
+
+   .explore-text{
+    padding: 0.625rem;
+    font-size: 1.5rem;
+   }
+
+   .landmarks{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 1.2rem;
+  }
+
+   .attraction{
+    margin: 1.563rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: auto;
+  }
+
+  .attraction h1, h2{
+    font-size: 1.563rem;
+  }
+
+
+  .attraction p{
+    font-size: 1.5rem;
+  }
+
+  .attraction img{
+    height: auto;
+    width: auto;
+    padding: 0.313rem;
+    border-right: none;
+  }
+
 }
