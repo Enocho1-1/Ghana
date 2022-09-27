@@ -48,11 +48,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-<<<<<<< HEAD
-    background-color: 	rgb(212,235,242,0.3);
-=======
     background-color: rgb(193,225,236,0.3);
->>>>>>> ffb7355d56017f817fdb87d5bfd25fc1b5598c6a
     z-index: 0;
   }
   
@@ -189,7 +185,7 @@
     bottom: 0;
     margin: auto;
     height: 31.25rem;
-    width: 85vw;
+    width: 65vw;
     color: #F8F0E3;
     text-shadow: 0.063em 0.063em #cc0000;
     background: rgba( 207, 102, 102, 0.25 );
