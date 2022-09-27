@@ -263,6 +263,14 @@
     bottom: 0;
   }
   
+  .home-container{
+    margin-top: 3.125rem;
+  }
+
+  .overlay{
+    height: 120vh;
+  }
+
   .menu-options{
     margin-top: 6.25rem ;
     height: 25rem;
@@ -275,18 +283,11 @@
   }
 
   .nav-bar{
-    justify-content: flex-end;
     height: 4.688rem;
-    width: 100vw;
-    z-index: 2;
   }
 
   .main-menu{
     margin: 1rem;
-  }
-
-  .overlay{
-    height: 100vh;
   }
   
   .intro-text h1{
@@ -294,12 +295,11 @@
   }
 
   .intro-text{
-    align-self: flex-start;
+    margin-top: 9.375rem;
     height: auto;
     width: auto;
-    font-size: 1.563rem;
-    line-height: 3.125rem;
-   
+    font-size:2.188rem;
+    line-height: 3.125rem; 
   }
   
   .intro-text button {
@@ -348,7 +348,54 @@
     height: auto;
     width: auto;
     padding: 0.313rem;
-    border-right: none;
   }
 
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 37.5rem)and (max-width: 56.25rem) {
+
+  .side-menu{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .overlay{
+    height: 125vh;
+  }
+
+  .menu-options a{
+    margin: 1.563rem;
+    font-size: 4.688rem;
+    padding: 0.625rem;
+  }
+
+  .explore-modal{
+    height: 31.25rem;
+    width: 100vw;
+   }
+
+   .attraction{
+    margin-bottom: 2.5rem;
+    padding: 1.563rem 0;
+  }
+
+  .attraction h1, h2{
+    font-size: 1.563rem;
+  }
+
+
+  .attraction p{
+    font-size: 1.563rem;
+  }
+
+  /* .attraction img{
+    height: auto;
+    width: auto;
+    padding: 0.313rem;
+  } */
 }
