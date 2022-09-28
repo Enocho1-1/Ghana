@@ -42,10 +42,44 @@
   }
   
   .nav-bar{
+    display: flex;
+    align-items: center;
     justify-content: flex-end;
-    height: auto;
+    height: 50px;
     width: 100vw;
     z-index: 2;
+  }
+
+  .nav-bar div{
+    margin-right: 15px;
+    margin-bottom: 15px;
+    height: 4px;
+    width: 50px;
+    padding: 2px 2px;
+    background-color: #ffff00;
+    border-radius: 25px;
+  }
+
+  .nav-bar div::before {
+    content: "";
+    margin-top: 15px;
+    display: flex;
+    height: 4px;
+    width: 50px;
+    padding: 2px 2px;
+    background-color: #ffff00;
+    border-radius: 25px;
+  }
+
+  .nav-bar div::after {
+    content: "";
+    margin-top: 15px;
+    display: flex;
+    height: 4px;
+    width: 50px;
+    padding: 2px 2px;
+    background-color: #ffff00;
+    border-radius: 25px;
   }
 
   .main-menu{
