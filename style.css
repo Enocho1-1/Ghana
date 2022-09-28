@@ -34,12 +34,24 @@
   
   .video-back{
     position: fixed;
+    min-height: 150vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
   }
   
+  .nav-bar{
+    justify-content: flex-end;
+    height: auto;
+    width: 100vw;
+    z-index: 2;
+  }
+
+  .main-menu{
+    margin: 1.25em;
+  }
+
   .overlay{
     position: absolute;
     height: 100vh;
@@ -52,11 +64,6 @@
     z-index: 0;
   }
   
-  .overlay div{
-    height: 15.625rem;
-    width: 15.625rem;
-  }
-  
   :is(.home-container, .nav-bar,.side-menu,.close){
     display: flex;
     position: absolute;
@@ -65,8 +72,7 @@
   .side-menu{
     position: fixed;
     display: none;
-    width: 20%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 80%;
     right: 0;
@@ -78,8 +84,8 @@
   }
 
   .menu-options{
-    margin-top: 9.375rem ;
-    height: 25rem;
+    margin-top: 6.25em ;
+    height: 25em;
     width: auto;
     padding: 0.625rem;
     display: flex;
@@ -89,9 +95,9 @@
 
   .menu-options a{
     text-decoration: none;
-    font-size: 3.438rem;
-    margin: 0.625rem;
-    padding: 0.313rem;
+    font-size: 3.438em;
+    margin: 0.625em;
+    padding: 0.313em;
     color: #ffff00;
     text-shadow: 0.125rem 0.125rem 0.188rem #008000;
   }
@@ -102,6 +108,7 @@
     text-shadow: 0.063em 0.063em #ff0000;
   }
 
+  /* Side Menu Close Button */
   .close{
     justify-content: flex-start;
     height: 4.063rem;
@@ -109,9 +116,13 @@
   }
 
   .close img{
-    margin: 0.625rem;
+    margin: 0.625em;
     height: auto;
-    width: 2.813rem;
+    width: 2.813em;
+  }
+
+ :is(.main-menu, .closeBtn,.modalClose):hover {
+    cursor: pointer;
   }
 
   .home-container{
@@ -120,35 +131,21 @@
     z-index: 1;
   }
 
-  .nav-bar{
-    justify-content: flex-end;
-    height: auto;
-    width: 100vw;
-    z-index: 2;
-  }
-
-  .main-menu{
-    margin: 1.25rem;
-  }
-
- :is(.main-menu, .closeBtn,.modalClose):hover {
-    cursor: pointer;
-  }
-
   .intro-text{
     margin: 4.688rem;
-    height: 18.75rem;
-    width: 56.25rem;
+    height: auto;
+    width: 21.875em;
     align-self: center;
-    font-size: 2.813rem;
-    line-height: 4.063rem;
+    font-size: 2.813em;
+    line-height: 1.2;
     color: #ffff00;
     text-shadow: 0.125rem 0.125rem 0.188rem #008000;
   }
   
   .intro-text h1{
-    font-size: 4.688rem;
-    margin-bottom: 0.938rem;
+    font-size: 1.5em;
+    margin-bottom: 0.313em;
+    line-height: 1;
   }
 
   .intro-text button {
@@ -157,7 +154,7 @@
     font-family: inherit;
     padding: 0.6em 1.3em;
     font-weight: 900;
-    font-size: 1.563rem;
+    font-size: 0.5em;
     border: none;
     border-radius: 0.4em;
     box-shadow: 0.1em 0.1em #008000;
@@ -184,7 +181,7 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    height: 31.25rem;
+    height: 31.25em;
     width: 65vw;
     color: #F8F0E3;
     text-shadow: 0.063em 0.063em #cc0000;
@@ -197,34 +194,35 @@
 
    .explore-head {
     text-align:center;
-    margin-top: 4.688rem;
-    font-size: 2.813rem;
+    margin-top: 2em;
+    font-size: 2.813em;
    }
 
    .explore-text{
-    padding: 0.625rem;
-    font-size: 1.875rem;
+    text-align: center;
+    padding: 0.625em;
+    font-size: 1.875em;
    }
 
   .landmarks{
     display: flex;
     flex-direction: column;
     height: auto;
-    margin-top: 3.125rem;
+    margin-top: 1.875em;
   }
 
   .attraction{
     display: flex;
     flex-direction: row;
-    height: 18.75rem;
+    height: auto;
     width: auto;
   }
 
   .attraction img{
     height: auto;
-    width: 15.625rem;
-    margin: 0.625rem;
-    padding: 0.313rem;
+    width: 15.625em;
+    margin: 0.625em;
+    padding: 0.313em;
   }
 
 
@@ -235,7 +233,7 @@
   .pop-overlay{
     position: fixed;
     display: none;
-    width: 100%; 
+    min-width: 100%; 
     height: 100%; 
     top: 0;
     left: 0;
@@ -250,10 +248,6 @@
 /* Small Mobile Phone Media Query */
 @media only screen and (max-width: 37.5rem){
 
-  .video-back{
-    height: 100vh;
-  }
-
   .side-menu{
     width: 100vw;
     height: 100vh;
@@ -264,22 +258,11 @@
   }
   
   .home-container{
-    margin-top: 3.125rem;
+    margin-top: 3.125em;
   }
 
   .overlay{
-    height: 120vh;
-  }
-
-  .menu-options{
-    margin-top: 6.25rem ;
-    height: 25rem;
-    padding: 0.625rem;
-  }
-
-  .menu-options a{
-    margin: 1.25rem;
-    padding: 0.313rem;
+    height: 150vh;
   }
 
   .nav-bar{
@@ -289,17 +272,13 @@
   .main-menu{
     margin: 1rem;
   }
-  
-  .intro-text h1{
-    font-size: 2.5rem;
-  }
 
   .intro-text{
     margin-top: 9.375rem;
     height: auto;
     width: auto;
     font-size:2.188rem;
-    line-height: 3.125rem; 
+    line-height: 2.813rem; 
   }
   
   .intro-text button {
@@ -311,7 +290,8 @@
       
    .explore-modal{
     height: 31.25rem;
-    width: 100vw;
+    width: 95vw;
+    padding: 5px;
    }
 
    .explore-text{
@@ -330,9 +310,7 @@
     margin: 1.563rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: auto;
-    width: auto;
+    align-items: center;
   }
 
   .attraction h1, h2{
@@ -345,15 +323,20 @@
   }
 
   .attraction img{
-    height: auto;
-    width: auto;
+    height: 21.875rem;
+    width: 20rem;
     padding: 0.313rem;
   }
 
 }
 
+/* @media (min-height: 12.5rem),screen and (orientation: landscape)  {
+  .overlay{
+    height: 160vh;
+  }
+} */
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 37.5rem)and (max-width: 56.25rem) {
+@media only screen and (min-width: 37.5rem) and (max-width: 56.25rem) {
 
   .side-menu{
     width: 100vw;
@@ -375,12 +358,16 @@
   }
 
   .explore-modal{
-    height: 31.25rem;
+    height: 37.5rem;
     width: 100vw;
    }
 
    .attraction{
-    margin-bottom: 2.5rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.563rem;
     padding: 1.563rem 0;
   }
 
@@ -393,9 +380,21 @@
     font-size: 1.563rem;
   }
 
-  /* .attraction img{
-    height: auto;
-    width: auto;
+  .attraction img{
+    height: 21.875rem;
+    width: 450px;
     padding: 0.313rem;
+  }
+}
+
+@media only screen and (min-width: 62rem){
+  
+  .overlay{
+    height: 100vh;
+  }
+
+  /* .side-menu{
+    left: 40%;
   } */
+ 
 }
