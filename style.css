@@ -50,19 +50,13 @@
     z-index: 2;
   }
 
-  .nav-bar div{
+  /* .nav-bar div{
     margin-right: 15px;
-    margin-bottom: 15px;
-    height: 4px;
-    width: 50px;
-    padding: 2px 2px;
-    background-color: #ffff00;
-    border-radius: 25px;
-  }
+  } */
 
-  .nav-bar div::before {
+  .main-menu::before {
     content: "";
-    margin-top: 15px;
+    margin-top: 12px;
     display: flex;
     height: 4px;
     width: 50px;
@@ -71,9 +65,9 @@
     border-radius: 25px;
   }
 
-  .nav-bar div::after {
+  .main-menu::after {
     content: "";
-    margin-top: 15px;
+    margin-top: 8px;
     display: flex;
     height: 4px;
     width: 50px;
@@ -84,6 +78,12 @@
 
   .main-menu{
     margin: 1.25em;
+    margin-bottom: 12px;
+    height: 4px;
+    width: 50px;
+    padding: 2px 2px;
+    background-color: #ffff00;
+    border-radius: 25px;
   }
 
   .overlay{
@@ -253,6 +253,7 @@
   }
 
   .attraction img{
+    border-radius: 1.563rem;
     height: auto;
     width: 15.625em;
     margin: 0.625em;
@@ -364,13 +365,13 @@
 
 }
 
-/* @media (min-height: 12.5rem),screen and (orientation: landscape)  {
+@media (min-height: 12.5rem),screen and (orientation: landscape)  {
   .overlay{
     height: 160vh;
   }
-} */
+}
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 37.5rem) and (max-width: 56.25rem) {
+ @media only screen and (min-width: 37.5rem) and (max-width: 56.25rem) {
 
   .side-menu{
     width: 100vw;
@@ -406,20 +407,20 @@
   }
 
   .attraction h1, h2{
-    font-size: 1.563rem;
+    font-size: 2.5rem;
   }
 
 
   .attraction p{
-    font-size: 1.563rem;
+    font-size: 1.875rem;
   }
 
   .attraction img{
     height: 21.875rem;
-    width: 450px;
+    width: 500px;
     padding: 0.313rem;
   }
-}
+} 
 
 @media only screen and (min-width: 62rem){
   
@@ -427,8 +428,8 @@
     height: 100vh;
   }
 
-  /* .side-menu{
+  .side-menu{
     left: 40%;
-  } */
+  } 
  
 }
