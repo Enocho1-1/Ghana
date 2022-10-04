@@ -212,7 +212,6 @@
     bottom: 0;
     margin: auto;
     height: 31.25em;
-    width: 95vw;
     color: #F8F0E3;
     text-shadow: 0.063em 0.063em #cc0000;
     background: rgba( 207, 102, 102, 0.25 );
@@ -422,6 +421,12 @@
   .overlay{
     height: 100vh;
   }
+
+  .explore-modal{
+    height: 37.5rem;
+    width: 75vw;
+    padding: 1.563em;
+   }
  
   .attraction h1, h2{
     font-size: 2.5rem;
