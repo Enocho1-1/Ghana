@@ -429,3 +429,26 @@ table{
     height:15.625em;
     width: auto;
 }
+
+/* Media Query */
+/* Small Mobile Phone Media Query */
+@media only screen and (max-width: 37.5em){
+
+  :is(.primary-header, .secondary-header, .tertiary-header){
+    height: 31.25em;
+    /* padding: 0.5em; */
+  }
+
+  :is(.primary-header, .secondary-header, .tertiary-header) h1{
+    font-size: 5rem;
+  }
+
+  .history-container, .culture-container, .politics-container{
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .modal-style{
+    height: 50vh;
+  }
+}
