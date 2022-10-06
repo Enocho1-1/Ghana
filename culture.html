@@ -23,18 +23,18 @@
             <span onclick="closeFullImg()">X</span>
         </div>
           <!-- Culture Button -->
-            <button class="culture-button" id="culture">
+            <a href="#modalBox" class="button-link culture">
                 <h1>Cultural Environment</h1>
-            </button>
+            </a>
         <!-- Culture Modal -->
-        <div class="modal-style">
-            <div class="close">
-                <img src="icons/close.png" alt="close" class="closeBtn">
-            </div>
-            <div class="contents">
-                <h1>Cultural Environment</h1>
-                <hr>
-                <p>Ghana has a rich indigenous culture. Culturally, the peoples of Ghana have many affinities with their French-speaking neighbours, but each ethnic group has distinctive cultural attributes. In all parts of the country the cultural heritage is closely linked with religion and the institution of chieftaincy. Various festivals and rites are centred on chieftaincy and the family and are occasioned by such events as harvest, marriage, birth, puberty, and death.</p>
+        <div id="modalBox" class="overlay">
+            <div class="modal-style">
+                <a href="#" class="modal-close">&times;</a>
+                <div class="contents">
+                    <h1>Cultural Environment</h1>
+                    <hr>
+                    <p>Ghana has a rich indigenous culture. Culturally, the peoples of Ghana have many affinities with their French-speaking neighbours, but each ethnic group has distinctive cultural attributes. In all parts of the country the cultural heritage is closely linked with religion and the institution of chieftaincy. Various festivals and rites are centred on chieftaincy and the family and are occasioned by such events as harvest, marriage, birth, puberty, and death.</p>
+                </div>
             </div>
         </div>
         <!-- Art Button -->
@@ -85,25 +85,25 @@
         document.addEventListener('click', e => {
             let next_sibling = e.target.nextElementSibling
             switch(e.target.className){
-                case 'culture-button':
-                    next_sibling.style.display = 'block'
-                    document.querySelector('#overlay').style.display = 'block'
-                break
-                case 'art-button':
-                    next_sibling.style.display = 'block'
-                    document.querySelector('#overlay').style.display = 'block'
-                break
-                case 'sports-button':
-                    next_sibling.style.display = 'block'
-                    document.querySelector('#overlay').style.display = 'block'
-                break
-                case "closeBtn":
-                    document.querySelectorAll('img.closeBtn').forEach( element => {
-                        element.parentElement.parentElement.style.display = 'none'
-                        document.querySelector('#overlay').style.display = 'none'
-                    })
+                // case 'culture-button':
+                //     next_sibling.style.display = 'block'
+                //     document.querySelector('#overlay').style.display = 'block'
+                // break
+                // case 'art-button':
+                //     next_sibling.style.display = 'block'
+                //     document.querySelector('#overlay').style.display = 'block'
+                // break
+                // case 'sports-button':
+                //     next_sibling.style.display = 'block'
+                //     document.querySelector('#overlay').style.display = 'block'
+                // break
+                // case "closeBtn":
+                //     document.querySelectorAll('img.closeBtn').forEach( element => {
+                //         element.parentElement.parentElement.style.display = 'none'
+                //         document.querySelector('#overlay').style.display = 'none'
+                //     })
                 
-                break
+                // break
         }
         })
 

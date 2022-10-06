@@ -93,20 +93,39 @@ a{
 }
 
 /* Button Background Images */
+
+:is(.early-history, .independence, .current, .culture, .art, .sports,.judicial){
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .early-history{
   background-image: url('imgs/akan-artifact.jpg'); 
-  background-size: cover;
 }
 
 .independence{
   background-image: url('imgs/3f50eec35ff0f6ab0a9984b6926249c7.jpg');
-  background-size: cover;
 }
 
 .current{
   background-image: url('imgs/accra-ghana-Trafic_routier_sur_Liberation_Road_Accra_-_Ghana-1200x900.jpg');
   background-position: 60%;
 }
+
+.culture{
+  background-image: url('imgs/traditions-of-ghana-warrior-king-ladies.jpg');
+  background-position: 60%;
+}
+
+.art{
+  background-image: url('imgs/cbe39e8c9fd2e6958341c423a73a7693.jpg');
+}
+
+.sports{
+  background-image: url('imgs/Asamoah-Gyan-1.jpg');
+  background-position: 60%;
+}
+
 
 .govt{
   background-image: url('imgs/ghana-politics-1483829828-9429.jpg');
@@ -125,7 +144,6 @@ a{
 
 .judicial{
   background-image: url('imgs/supreme.jpg');
-  background-size: cover;
   background-position: 60%;
 }
 
@@ -369,26 +387,6 @@ table{
   }
 
 /* ID Selectors */
-:is(#early-history, #independence, #current, #culture, #art, #sports){
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-
-#culture{
-  background-image: url('imgs/traditions-of-ghana-warrior-king-ladies.jpg');
-  background-position: 60%;
-}
-
-#art{
-  background-image: url('imgs/cbe39e8c9fd2e6958341c423a73a7693.jpg');
-}
-
-#sports{
-  background-image: url('imgs/Asamoah-Gyan-1.jpg');
-  background-position: 60%;
-}
 
 
 
