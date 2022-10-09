@@ -13,14 +13,11 @@
     <main>
     <!-- Nav Menu -->
     <div class="nav-bar">
-        <div class="main-menu"></div>
-        <!-- <img src="icons/list.png" alt="menu" class="main-menu"> -->
+        <a href="#menu" class="main-menu"><img src="imgs/star.png" alt=""></a>
     </div>
     <!-- Side Menu -->
-    <div class="side-menu">
-        <div class="close">
-            <img src="icons/close.png" alt="close" class="closeBtn">
-        </div>
+    <div id="menu" class="side-menu">
+        <a href="" class="modal-close">&times;</a>
         <div class="menu-options">
             <a href="history.html" target="_blank" class="history">History</a>
             <a href="culture.html" target="_blank" class="culture">Culture</a>
@@ -35,23 +32,22 @@
             Arise, arise, O sons of Ghanaland,
             And under God march on for evermore.
             <br>
-            <button class="explore">Explore</button>
+            <a href="#landmarks" class="explore">Explore</a>
         </div>
         <!-- Pop Up modal -->
-        <div class="explore-modal">
-            <div class="close">
-                <img src="icons/close.png" alt="close" class="modalClose">
-            </div>
-            <h1 class="explore-head">Welcome To Ghana</h1>
-            <div class="explore-text">
-                Ghana (The Gold Coast) officially known as the Republic of Ghana is a country in West Africa. Spanning the Gulf of Guinea and the Atlantic Ocean to the south, sharing borders with the Ivory Coast in the west, Burkina Faso in the north, and Togo in the east. With over 31 million people, Ghana is the second-most populous country in West Africa, after Nigeria. The capital and largest city is Accra; other major cities include Kumasi, Tamale, and Sekondi-Takoradi.  
-            </div>
-            <h1 class="explore-head">Tourists Attractions</h1>
-            <div class="landmarks">
-                <!-- Tourists Attractions -->
+        <div id="landmarks" class="pop-overlay">
+            <div class="explore-modal">
+                <a href="" class="modal-close">&times;</a>
+                <h1 class="explore-head">Welcome To Ghana</h1>
+                <div class="explore-text">
+                    Ghana (The Gold Coast) officially known as the Republic of Ghana is a country in West Africa. Spanning the Gulf of Guinea and the Atlantic Ocean to the south, sharing borders with the Ivory Coast in the west, Burkina Faso in the north, and Togo in the east. With over 31 million people, Ghana is the second-most populous country in West Africa, after Nigeria. The capital and largest city is Accra; other major cities include Kumasi, Tamale, and Sekondi-Takoradi.  
+                </div>
+                <h1 class="explore-head">Tourists Attractions</h1>
+                <div class="landmarks">
+                    <!-- Tourists Attractions -->
+                </div>
             </div>
         </div>
-        <div class="pop-overlay"></div>
     </div>
         <video muted loop autoplay class="video-back">
             <source src="video/pexels-khophi-7944423 (1).mp4">
@@ -59,6 +55,15 @@
         <div class="overlay"></div>
     </main>
     <script src="landmarks.js"></script>
-    <script src="script.js"></script>
+    <script>
+        setInterval( () => {
+    document.querySelector('h1.explore-head').innerHTML = 'Yɛma wo akwaaba'
+        }, 2000)
+
+        setInterval( () => {
+            document.querySelector('h1.explore-head').innerHTML = 'Welcome To Ghana'
+        }, 3000)
+
+    </script>
 </body>
 </html>
