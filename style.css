@@ -29,7 +29,7 @@
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
   }
   
   .video-back{
@@ -48,23 +48,51 @@
 
   .nav-bar a{
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 1em;
+    right: 1em;
     z-index: 2;
   }
 
-  .nav-bar a:hover{
-    cursor: pointer;
-    transform: rotate(45deg);
-    transition: ease-in-out 0.5s;
-  }
-
-  /* .nav-bar a:hover::after{
+  .nav-bar a::before{
     content: "";
     display: block;
-    height: 4px;
-    width: ;
-  } */
+    height: 5px;
+    width: auto;
+    background-color: #cc0000;
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  .nav-bar a::after{
+    content: "";
+    display: block;
+    height: 5px;
+    width: auto;
+    background-color: #008000;
+    transition: all 1s;
+    opacity: 0;
+  }
+  .nav-bar a:hover{
+    cursor: pointer;
+  }
+
+  .nav-bar a:hover::before{
+    content: "";
+    display: block;
+    height: 5px;
+    width: auto;
+    background-color: #cc0000;
+    opacity: 1; 
+  }
+
+  .nav-bar a:hover::after{
+    content: "";
+    display: block;
+    height: 5px;
+    width: auto;
+    background-color: #008000;
+    opacity: 1; 
+  }
 
 
   .nav-bar img{
@@ -91,7 +119,7 @@
   }
 
   .side-menu{
-    position: fixed;
+    position: absolute;
     height: 100%;
     top: 0;
     left: 80%;
@@ -193,13 +221,14 @@
     text-decoration: none;
     color: #ffff00;
     font-family: inherit;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.5em;
     padding: 0.6em 1.3em;
     font-size: 1.5rem;
     border: none;
     border-radius: 0.4em;
     box-shadow: 0.1em 0.1em #008000;
    }
+   
    
    .intro-text a:hover {
     transform: translate(-0.05em, -0.05em);
@@ -303,9 +332,6 @@
     bottom: 0;
   }
   
-  .home-container{
-    margin-top: 3.438em;
-  }
 
   .overlay{
     height: 150vh;
@@ -328,7 +354,7 @@
   }
 
   .intro-text{
-    margin-top: 3.125em;
+    /* margin-top: 2em; */
     height: auto;
     width: auto;
     font-size:2rem;
@@ -385,7 +411,7 @@
 }
 
 /* Medium devices (tablets) */
- @media only screen and (min-width: 37.5em) and (max-width: 56.25em) {
+ @media only screen  and (max-width: 48em) {
 
   .side-menu{
     width: 100vw;
@@ -441,7 +467,7 @@
 } 
 
 /* Larger Devices (Desktop) */
-@media only screen and (min-width: 56.25em){
+@media only screen and (min-width: 62em){
   
   .overlay{
     height: 100vh;
