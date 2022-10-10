@@ -56,8 +56,16 @@
   .nav-bar a:hover{
     cursor: pointer;
     transform: rotate(45deg);
-    transition: ease-in-out 2s;
+    transition: ease-in-out 0.5s;
   }
+
+  /* .nav-bar a:hover::after{
+    content: "";
+    display: block;
+    height: 4px;
+    width: ;
+  } */
+
 
   .nav-bar img{
     height: 50px;
@@ -169,7 +177,9 @@
     align-self: center;
     font-size: 2.813rem;
     line-height: 1.2;
-    color: #ffff00;
+    color: #cc0000;
+    text-shadow: 4px 4px 4px #008000;
+    -webkit-text-stroke: 1px #ffff00;
   }
   
   .intro-text h1{
@@ -179,12 +189,12 @@
   }
 
   .intro-text a{
-    background: #ffff00;
+    background: #cc0000;
     text-decoration: none;
-    color: #008000;
+    color: #ffff00;
     font-family: inherit;
+    letter-spacing: 0.3em;
     padding: 0.6em 1.3em;
-    font-weight: 900;
     font-size: 1.5rem;
     border: none;
     border-radius: 0.4em;
