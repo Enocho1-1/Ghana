@@ -227,7 +227,7 @@
     backdrop-filter: blur( 0.25rem  );
     -webkit-backdrop-filter: blur( 0.25rem  );
     border-radius: 0.625em;
-    z-index: 4;
+    z-index: 3;
   }
 
   .explore-head {
@@ -317,7 +317,7 @@
 
 /* Media Query */
 /* Small Mobile Phone Media Query */
-@media only screen and (max-width: 600px){
+@media screen and (orientation: portrait) and (max-width: 600px){
 
   html{
     overflow-y: hidden;
@@ -326,10 +326,7 @@
   .side-menu{
     width: 100vw;
     height: 100vh;
-    top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
   }
   
   .main-menu{
@@ -359,7 +356,11 @@
     font-size: 1.563rem;
    }
 
-      
+  
+   .pop-overlay{
+    overflow-x: hidden;
+   }
+   
    .explore-modal{
     height: 40.625em;
     width: 85vw;
@@ -368,7 +369,7 @@
 
    .explore-text{
     padding: 0.625em;
-    font-size: 2rem;
+    font-size: 25px;
    }
 
    .landmarks{
