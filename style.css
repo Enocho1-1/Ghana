@@ -184,6 +184,9 @@
   }
 
   .intro-text a{
+    display: block;
+    max-width: 9.375rem;
+    margin-top: 1.563em;
     background: #cc0000;
     text-decoration: none;
     color: #ffff00;
@@ -314,7 +317,11 @@
 
 /* Media Query */
 /* Small Mobile Phone Media Query */
-@media only screen and (max-width: 37.5em){
+@media only screen and (max-width: 600px){
+
+  html{
+    overflow-y: hidden;
+  }
 
   .side-menu{
     width: 100vw;
@@ -325,39 +332,30 @@
     bottom: 0;
   }
   
-
-  .overlay{
-    height: 150vh;
-  }
-
-  .nav-bar{
-    height: 4.688em;
-  }
-
   .main-menu{
     margin: 1em;
   } 
 
-  .menu-options a{
-    font-size: 4.688em;
+  .modal-close{
+    font-size: 3.5rem;
   }
 
+  .menu-options a{
+    font-size: 3.125rem;
+  }
+  
   .intro-text h1{
-    font-size: 3.2rem;
+    font-size: 2.5rem;
   }
 
   .intro-text{
-    /* margin-top: 2em; */
     height: auto;
     width: auto;
     font-size:2rem;
-    line-height: 1.3; 
+    line-height: 1; 
   }
   
   .intro-text a {
-    margin-top: 0.625em;
-    padding: 0.6em 1.3em;
-    font-weight: 900;
     font-size: 1.563rem;
    }
 
@@ -404,7 +402,7 @@
 }
 
 /* Medium devices (tablets) */
- @media only screen  and (max-width: 48em) {
+ @media only screen  and (min-width: 600px) and (max-width: 768px) {
 
   .side-menu{
     width: 100vw;
