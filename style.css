@@ -352,7 +352,6 @@
   }
 
   .intro-text{
-    height: auto;
     width: auto;
     font-size:2rem;
     line-height: 1; 
@@ -411,6 +410,7 @@
 
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px){
+
   .side-menu{
     height: 100vh;
     top: 0;
@@ -419,10 +419,6 @@
     bottom: 0;
   }
   
-
-  .overlay{
-    width: 100vw;
-  }
   .menu-options{
     margin-top: 7em ;
   }
@@ -432,9 +428,23 @@
     padding: 0.625em;
   }
 
+  .intro-text h1{
+    font-size: 3rem;
+  }
+
+  .intro-text{
+    width: auto;
+    font-size:2rem;
+    line-height: 1; 
+  }
+  
+  .intro-text a {
+    font-size: 1.563rem;
+   }
+
   .explore-modal{
-    height: 40rem;
-    width: 85vw;
+    height: 35rem;
+    width: 95vw;
    }
 
    .explore-head {
@@ -493,7 +503,6 @@
   }
 
   .intro-text{
-    height: auto;
     width: auto;
     font-size:3.5rem;
     line-height: 1; 
@@ -538,12 +547,9 @@
   }
 } 
 
-/* Larger Devices (Desktop) */
-@media only screen and (min-width: 62em){
+/* Media Query for Laptops and Desktops */
+ @media (min-width: 1025px) and (max-width: 1280px){
   
-  .overlay{
-    height: 100vh;
-  }
 
   .explore-modal{
     width: 75vw;
