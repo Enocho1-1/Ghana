@@ -3,6 +3,10 @@
     padding: 0;
   }
   
+  html{
+    overflow: hidden;
+  }
+
   ::-webkit-scrollbar {
     width: 0.625rem;
   }
@@ -142,7 +146,7 @@
 
   .menu-options a{
     text-decoration: none;
-    font-size: 3.438em;
+    font-size: 3.438rem;
     margin: 0.313em;
     padding: 0.313em;
     color: #ffff00;
@@ -165,6 +169,12 @@
     z-index: 1;
   }
 
+  .intro-text h1{
+    font-size: 4.063rem;
+    margin-bottom: 0.313em;
+    line-height: 1;
+  }
+
   .intro-text{
     margin: 4.688rem;
     height: auto;
@@ -177,11 +187,7 @@
     -webkit-text-stroke: 1px #ffff00;
   }
 
-  .intro-text h1{
-    font-size: 4.063rem;
-    margin-bottom: 0.313em;
-    line-height: 1;
-  }
+ 
 
   .intro-text a{
     display: block;
@@ -316,8 +322,8 @@
 
 
 /* Media Query */
-/* Small Mobile Phone Media Query */
-@media screen and (orientation: portrait) and (max-width: 600px){
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px){
 
   html{
     overflow-y: hidden;
@@ -381,6 +387,7 @@
 
    .attraction{
     margin: 1.563em;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -402,29 +409,31 @@
 
 }
 
-/* Medium devices (tablets) */
- @media only screen  and (min-width: 600px) and (max-width: 768px) {
-
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px){
   .side-menu{
-    width: 100vw;
     height: 100vh;
     top: 0;
-    left: 0;
+    left: 70%;
     right: 0;
     bottom: 0;
   }
   
+
   .overlay{
-    height: 125vh;
+    width: 100vw;
+  }
+  .menu-options{
+    margin-top: 7em ;
   }
 
   .menu-options a{
-    font-size: 4.688rem;
+    font-size: 3rem;
     padding: 0.625em;
   }
 
   .explore-modal{
-    height: 37.5rem;
+    height: 40rem;
     width: 85vw;
    }
 
@@ -454,6 +463,77 @@
 
   .attraction img{
     width: 28.125em;
+    padding: 0.313em;
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .side-menu{
+    height: 100vh;
+    top: 0;
+    left: 70%;
+    right: 0;
+    bottom: 0;
+  }
+  
+
+  .menu-options{
+    margin-top: 7em ;
+  }
+
+  .menu-options a{
+    font-size: 3rem;
+    padding: 0.625em;
+  }
+
+  .intro-text h1{
+    font-size: 4.5rem;
+  }
+
+  .intro-text{
+    height: auto;
+    width: auto;
+    font-size:3.5rem;
+    line-height: 1; 
+  }
+  
+  .explore-modal{
+    height: 45rem;
+    width: 95vw;
+   }
+
+   .explore-head {
+    text-align:center;
+    margin-top: 2.5em;
+    font-size: 3rem;
+   }
+
+   .explore-text{
+    font-size: 2.188rem;
+  }
+
+   .attraction{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.563em;
+    padding: 1.563em 0;
+  }
+
+  .attraction h1, h2{
+    font-size: 3rem;
+  }
+
+
+  .attraction p{
+    font-size: 2.5rem;
+  }
+
+  .attraction img{
+    width: 50em;
     padding: 0.313em;
   }
 } 
