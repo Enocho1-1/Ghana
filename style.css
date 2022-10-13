@@ -547,7 +547,7 @@
   }
 
   .attraction img{
-    width: 50em;
+    width: 35em;
     padding: 0.313em;
   }
 } 
@@ -605,7 +605,7 @@
       max-width: 9.375rem;
       font-size: 1.5rem;
     }
-    
+
     .explore-modal{
       width: 75vw;
       padding: 1.563em;
