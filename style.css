@@ -480,6 +480,10 @@
     width: 28.125em;
     padding: 0.313em;
   }
+
+  .overlay, .pop-overlay{
+    height: auto;
+  }
 }
 
 /* Media Query for Tablets Ipads portrait mode */
