@@ -56,7 +56,7 @@ main{
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   background-color: #e0e0e0;
 }
 
@@ -162,7 +162,6 @@ a{
 :is(.primary-header, .secondary-header, .tertiary-header){
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 62.5em;
   width: 100vw;
   padding: 0.938em;
@@ -187,6 +186,7 @@ background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
 
 :is(.primary-header, .secondary-header, .tertiary-header) h1{
   position: relative;
+  margin-top: 15rem;
   font-size: 9.375rem;
   color:  #008000;
   text-shadow: -1px 0 #ffff00, 0 1px #ffff00, 1px 0 #ffff00, 0 -1px #ffff00, 7px 7px #ff0000;
@@ -247,7 +247,6 @@ background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
 }
 
 
-
 .modal-close{
   position: absolute;
   font-size: 5rem;
@@ -264,7 +263,8 @@ background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   z-index: 4;
@@ -283,6 +283,16 @@ background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
   font-size: 1.875rem;
   color: white;
   cursor: pointer;
+}
+
+/* Full Size Image Caption */
+#img-caption{
+  display: inline-block;
+  color: #F8F0E3;
+  font-size: 1.5rem;
+  margin: 1.25em 2.5em;
+  height: 18.75em;
+  width: 25em;
 }
 
 .contents{
@@ -407,38 +417,27 @@ table{
   opacity: 1;
 }
 
-/* Full Size Image Caption */
-#img-caption{
-  display: inline-block;
-  color: #F8F0E3;
-  font-size: 1.5rem;
-  margin: 1.25em 2.5em;
-  height: 18.75em;
-  width: 25em;
-}
 
-/* Culture Modal image box */
-.image-box{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 1.563em;
-    padding: 0.313em;
-    height:15.625em;
-    width: auto;
-}
+
+
+
 
 /* Media Query */
-/* Small Mobile Phone Media Query */
-@media only screen and (max-width: 37.5em){
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px){
+
+  main{
+    overflow-x: hidden;
+  }
 
   :is(.primary-header, .secondary-header, .tertiary-header){
     height: 31.25em;
+    padding: 0.313em;
   }
 
   :is(.primary-header, .secondary-header, .tertiary-header) h1{
-    font-size: 5rem;
+    font-size: 3rem;
   }
 
   .history-container, .culture-container, .politics-container{
@@ -449,11 +448,55 @@ table{
   .modal-style{
     height: 50vh;
   }
+
+  .contents h1{
+    font-size: 2.5rem;
+  }
+  
+  /* .contents h2{
+    font-size: 2rem;
+  } */
+
+  .contents p{
+    font-size: 1.5rem;
+  }
+
+  .content-img{
+      width: 6.25em;
+      height:6.25em;
+    }
+
+    .fullImage{
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+    }
+
+    .fullImage img{
+      width: 18.75em;
+      height: 18.75em;
+    }
+
+    #img-caption{
+      display: block;
+      color: #F8F0E3;
+      font-size: 1.5rem;
+      margin: 1.25em;
+      height: 4.688em;
+      width: auto;
+    }
+    
+
 }
 
-/* Medium devices (tablets) */
-@media only screen and (min-width: 37.5em) and (max-width: 56.25em) {
-  /* .modal-style{
-    height: 50vh;
-  } */
-}
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px){}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){}
+
+  /* Media Query for Large screens */
+  @media (min-width: 1281px){}
