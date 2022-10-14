@@ -486,7 +486,32 @@ table{
       width: auto;
     }
     
+    table{
+      margin:1.563em 0;
+      width: 100%;
+      font-size: 1.2rem;
+      text-align: center;
+      border-collapse: collapse;
+      background: -webkit-linear-gradient(#ff0000, #ffff00,#008000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    
+      td, th {
+        border: 0.063em solid #F8F0E3;
+        padding: 0.5em;
+      }
+    
+      td img{
+        height: 3.125em;
+        width: 3.125em;
+      }
 
+      .scrollable{
+        overflow-x: scroll;
+      } 
+    
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
