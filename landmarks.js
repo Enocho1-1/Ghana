@@ -45,7 +45,7 @@ const touristAttractions = [
     },
     {
         name: 'Cape Coast Castle',
-        location: 'Victoria Road, Cape Coast, Ghana',
+        location: 'Cape Coast, Ghana',
         details:'Cape Coasts castle is located in a historic fortification that dates back to the 17th century. The first fortress on the site was built by the Swedish Africa Company, although this was soon extensively rebuilt by Ghanas British colonial rulers. Converted into a museum during the 1950s, following Ghanaian independence, the current collections cover archaeology, ethnography, architectural history, and photography. A gift shop and bookshop are available and complete the main attractions.',
         image: 'https://www.blackpast.org/wp-content/uploads/prodimages/files/blackpast_images/Cape_Coast_Castle_Ghana_May_19_2019_Photo_by_Strange_Acid__CC_BY-SA_4.0.jpg'
     }
