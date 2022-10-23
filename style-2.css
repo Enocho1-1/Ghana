@@ -222,7 +222,7 @@ background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
 .branchs{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content:space-evenly;
   flex-wrap: wrap;
   height: auto;
   width: 31.25em;
@@ -437,7 +437,7 @@ table{
   }
 
   :is(.primary-header, .secondary-header, .tertiary-header) h1{
-    font-size: 3.5rem;
+    font-size: 5rem;
   }
 
   .history-container, .culture-container, .politics-container{
@@ -445,6 +445,15 @@ table{
     flex-direction: column;
   }
   
+  .button-link{
+    width: 20rem;
+  }
+
+  .branchs a:is(.button-link){
+    height: 10rem;
+    width: 10rem;
+  }
+
   .modal-style{
     height: 50vh;
   }
@@ -511,18 +520,29 @@ table{
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px){}
+@media (min-width: 481px) and (max-width: 767px){
+
+  .politics-container{
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .button-link{
+    width: 25rem;
+  }
+
+  .branchs a:is(.button-link){
+    height: 11rem;
+    width: 11rem;
+  }
+}
 
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px){
  
-  :is(.primary-header, .secondary-header, .tertiary-header) h1{
-    font-size: 6rem;
-  }
-
- .politics-container{
-    align-items: center;
-    flex-direction: column;
+  .branchs a:is(.button-link){
+    height: 11rem;
+    width: 11rem;
   }
 
   .contents h1{
@@ -579,7 +599,14 @@ table{
 }
 
 /* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) and (max-width: 1280px){}
+@media (min-width: 1025px) and (max-width: 1280px){
+
+  .branchs a:is(.button-link){
+    height: 11rem;
+    width: 11rem;
+  }
+ 
+}
 
   /* Media Query for Large screens */
   @media (min-width: 1281px){
