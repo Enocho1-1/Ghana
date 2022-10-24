@@ -310,6 +310,13 @@ background:  linear-gradient(0deg,#e0e0e0,transparent 80%),
     width: auto;
 }
 
+.contents div{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .contents button{
   height:  2.813em;
   width: 1.563;
@@ -426,6 +433,15 @@ table{
   opacity: 1;
 }
 
+/* ID Selectors */
+#athlete_table{
+  width: 80%;
+}
+
+#athlete_table td img{
+  height: 6.25em;
+  width: 45%;
+}
 /* Media Query */
 
 /* Media Query for Mobile Devices */
