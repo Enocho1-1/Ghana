@@ -435,7 +435,8 @@ table{
 
 /* ID Selectors */
 #athlete_table{
-  width: 80%;
+  height: auto;
+  width: 35em;
 }
 
 #athlete_table td img{
