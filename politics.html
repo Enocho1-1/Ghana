@@ -114,7 +114,7 @@
                                <p>This is a list of the heads of state of Ghana, from the independence of Ghana in 1957 to the present day. From 1957 to 1960 the head of state under the Constitution of 1957 was the queen of Ghana, Elizabeth II, who was simultaneously queen of the United Kingdom and the other Commonwealth realms. The monarch was represented in Ghana by a governor-general. Ghana became a republic within the Commonwealth under the Constitution of 1960 and the monarch and governor-general were replaced by an executive president. </p>
                                <hr>
                                <h2>Monarch (1957–1960)</h2>
-                                   <table>
+                                   <table id="monarchy_table">
                                        <tr>
                                            <th>No.</th>
                                            <th>Name</th>
@@ -123,22 +123,10 @@
                                            <th>Royal House</th>
                                            <th>Prime Minister</th>
                                        </tr>
-                                       <tr>
-                                           <td>1</td>
-                                           <td>Queen Elizabeth II</td>
-                                           <td><img src="imgs/Queen_Elizabeth_II_1959_(cropped).jpg" onclick="openFullImg(this.src, 'Queen Elizabeth II reigned over Ghana from 1957 to 1960 while simultaneously ruling the United Kingdom and the other Commonwealth realms.')"></td>
-                                           <td>
-                                               6 March 1957 - 	1 July 1960
-                                               <br>
-                                               3 years, 117 days
-                                           </td>
-                                           <td><a class="inner-link">Windsor</a><img src="imgs/Badge_of_the_House_of_Windsor.svg - Copy.png" class="hide"></td>
-                                           <td>Nkrumah</td>
-                                       </tr>
                                    </table>
                                <h2>Governor General</h2>
                                <p>The governor-general was the representative of the monarchy in Ghana and exercised most of the powers of the monarch. The governor-general was appointed for an indefinite term, serving at the pleasure of the monarch.  </p>  
-                               <table>
+                               <table id="governor_general">
                                    <tr>
                                        <th>No.</th>
                                        <th>Name</th>
@@ -147,7 +135,7 @@
                                        <th>Royal House</th>
                                        <th>Prime Minister</th>
                                    </tr>
-                                   <tr>
+                                   <!-- <tr>
                                        <td>1</td>
                                        <td>Sir Charles Arden-Clarke</td>
                                        <td><img src="imgs/The_National_Archives_UK_-_CO_1069-43-9_-_crop.jpg" onclick="openFullImg(this.src, 'Sir Charles Arden-Clarke was a British Colonial Adminstrator, furthermore he was a representative of the monarchy in Ghana.')"></td>
@@ -178,7 +166,7 @@
                                            <br>
                                            2 years, 231 days
                                        </td>
-                                   </tr>
+                                   </tr> -->
                                </table>
                                <h2>First Republic (1960–1966) </h2>
                                <p>Under the Constitution of 1960, the first constitution of the Republic of Ghana, the president replaced the monarch as the executive head of state. The president was elected by Parliament for a 5-year term. In the event of a vacancy, three members of the Cabinet served jointly as acting president.</p>
@@ -493,14 +481,60 @@
                 party_image: 'imgs/npp.png'
             }
         ]
-
+        const monarch_branch = [
+            {
+                No: '1',
+                name:'Queen Elizabeth II',
+                potrait:'imgs/Queen_Elizabeth_II_1959_(cropped).jpg',
+                reign:'6 March 1957 - 1 July 1960',
+                length:'3 years, 117 days',
+                royal: 'Windsor',
+                image: 'imgs/Badge_of_the_House_of_Windsor.svg - Copy.png',
+                description:'Queen Elizabeth II reigned over Ghana from 1957 to 1960 while simultaneously ruling the United Kingdom and the other Commonwealth realms.',
+                pm:'Nkrumah'
+            }
+        ]
+        const governor_general = [
+            {
+                No:'1',
+                name:'Sir Charles Arden-Clarke',
+                potrait:'imgs/The_National_Archives_UK_-_CO_1069-43-9_-_crop.jpg',
+                term:'6 March 1957 - 14 May 1957',
+                length:'69 days',
+                royal:'Queen Elizabeth II',
+                description:'Sir Charles Arden-Clarke was a British Colonial Adminstrator, furthermore he was a representative of the monarchy in Ghana.',
+                pm:'Nkrumah'
+            },
+            {
+                No:'2',
+                name:'Kobina Arku Korsah',
+                potrait:'imgs/Korsah.jpg',
+                term:'14 May 1957 - 13 November 1957',
+                length:'183 days',
+                royal:'Queen Elizabeth II',
+                description:'Kobina Arku Korsah was the first chief of justice of Ghana in 1956.',
+                pm:'Nkrumah'
+            },
+            {
+                No:'3',
+                name:'The Rt. Hon. The Earl of Listowel',
+                potrait:'imgs/Earl_of_Listowel_1962.jpg',
+                term:'13 November 1957 - 1 July 1960',
+                length:'2 years, 231 days',
+                royal:'Queen Elizabeth II',
+                description:'William Francis Hare, 5th Earl of Listowel ,was an Anglo-Irish peer and Labour politician. He was the last Secretary of State for India as well as the last Governor-General of Ghana.',
+                pm:'Nkrumah'
+            }
+        ]
          // Document Event Listener
          document.addEventListener('DOMContentLoaded', () => {
-            const executive = document.querySelector('#executive_table')
+            const executive = document.querySelector('#executive_table'),
+                  monarch = document.querySelector('#monarchy_table'),
+                  governer = document.querySelector('#governor_general')
 
             executive_branch.forEach( element => {
                 executive.innerHTML += `
-                 <tr class="executive_info">
+                 <tr>
                     <td>${element.office}</td>
                     <td><a class="inner-link">${element.name}</a><img src="${element.image}" class="hide"></td>
                     <td><a href="#" class="inner-link">${element.party}</a><img src="${element.party_image}" class="hide"></td>
@@ -508,7 +542,43 @@
                 </tr>
                 `
             })
+
+            monarch_branch.forEach( element => {
+                monarch.innerHTML += `
+                <tr>
+                    <td>${element.No}</td>
+                    <td>${element.name}</td>
+                    <td><img src="${element.potrait}" onclick="openFullImg(this.src, '${element.description}')"></td>
+                    <td>
+                        ${element.reign}
+                        <br>
+                        ${element.length}
+                    </td>
+                    <td><a class="inner-link">${element.royal}</a><img src="${element.image}" class="hide"></td>
+                    <td>${element.pm}</td>
+                </tr> 
+                `
+            })
+
+            governor_general.forEach(element => {
+                governer.innerHTML += `
+                <tr>
+                    <td>${element.No}</td>
+                    <td>${element.name}</td>
+                    <td><img src="${element.potrait}" onclick="openFullImg(this.src, '${element.description}')"></td>
+                    <td>
+                        ${element.term}
+                        <br>
+                        ${element.length}
+                    </td>
+                    <td>${element.royal}</td>
+                    <td>${element.pm}</td>
+                </tr> 
+                `
+            })
          })
+
+     
         // Modal Full Image Display
             const openFullImg = (pic, caption) => {
                 document.querySelector('#fullImageBox').style.display = 'flex'
