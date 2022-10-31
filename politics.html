@@ -50,22 +50,12 @@
                             <h1>Executive branch</h1>
                             <hr>
                             <!-- Executive Table -->
-                                <table>
+                                <table id="executive_table">
                                     <tr>
                                         <th>Office</th>
                                         <th>Name</th>
                                         <th>Party</th>
                                         <th>Term</th>
-                                      </tr>
-                                      <tr>
-                                        <td>President</td>
-                                        <td><a href="#" class="inner-link">Nana Akufo-Addo</a><img src="imgs/Nana_Akufo_Addo,_Jan._2020.jpg" class="hide"></td>
-                                        <td rowspan="2"><a href="#" class="inner-link">New Patriotic Party</a><img src="imgs/npp.png" class="hide"></td>
-                                        <td rowspan="2">7 January 2017</td>
-                                      </tr>
-                                      <tr>
-                                        <td>Vice President</td>
-                                        <td><a href="#" class="inner-link">Mahamudu Bawumia</a><img src="imgs/Mahamudu-Bawumia.jpg" class="hide"></td>
                                       </tr>
                                 </table>
                             <p> Nana Akufo-Addo holds the office of Presidency, in tandem with his Council of State. The president is the head of state, head of government, and commander in chief of the armed forces. He also selects the vice president. According to the Constitution, more than half of the presidentially appointed ministers of state must be selected from among members of Parliament.</p>
@@ -485,6 +475,40 @@
     </main>
     <script>
 
+        const executive_branch = [
+            {
+                office:'President',
+                name: 'Nana Akufo-Addo',
+                party:'New Patriotic Party',
+                term:'7 January 2017',
+                image: 'imgs/Nana_Akufo_Addo,_Jan._2020.jpg',
+                party_image: 'imgs/npp.png'
+            },
+            {
+                office:'Vice President',
+                name: 'Mahamudu Bawumia',
+                party:'New Patriotic Party',
+                term:'7 January 2017',
+                image:'imgs/Mahamudu-Bawumia.jpg',
+                party_image: 'imgs/npp.png'
+            }
+        ]
+
+         // Document Event Listener
+         document.addEventListener('DOMContentLoaded', () => {
+            const executive = document.querySelector('#executive_table')
+
+            executive_branch.forEach( element => {
+                executive.innerHTML += `
+                 <tr class="executive_info">
+                    <td>${element.office}</td>
+                    <td><a class="inner-link">${element.name}</a><img src="${element.image}" class="hide"></td>
+                    <td><a href="#" class="inner-link">${element.party}</a><img src="${element.party_image}" class="hide"></td>
+                    <td>${element.term}</td>
+                </tr>
+                `
+            })
+         })
         // Modal Full Image Display
             const openFullImg = (pic, caption) => {
                 document.querySelector('#fullImageBox').style.display = 'flex'
