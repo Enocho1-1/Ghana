@@ -507,6 +507,12 @@ table{
       height: 4.688em;
       width: auto;
     }
+
+    
+#athlete_table td img{
+  height: 6.25em;
+  width: 75%;
+}
     
     table{
       margin:1.563em 0;
