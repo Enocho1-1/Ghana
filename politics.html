@@ -138,24 +138,13 @@
                                </table>
                                <h2>First Republic (1960–1966) </h2>
                                <p>Under the Constitution of 1960, the first constitution of the Republic of Ghana, the president replaced the monarch as the executive head of state. The president was elected by Parliament for a 5-year term. In the event of a vacancy, three members of the Cabinet served jointly as acting president.</p>
-                               <table>
+                               <table id="First-Republic">
                                    <tr>
                                        <th>No.</th>
                                        <th>Name</th>
                                        <th>Portrait</th>
                                        <th>Term in Office</th>
                                        <th>Political Party</th>
-                                   </tr>
-                                   <tr>
-                                       <td>2</td>
-                                       <td>Kwame Nkrumah</td>
-                                       <td><img src="imgs/3f50eec35ff0f6ab0a9984b6926249c7.jpg" onclick="openFullImg(this.src, 'Osagyefo Kwame Nkrumah, was a Ghanaian politician, political theorist, and revolutionary. He was the first Prime Minister and President of Ghana, having led the Gold Coast to independence from Britain in 1957. An influential espouser of Pan-Africanism, Nkrumah was a founding member of the Organization of African Unity and winner of the Lenin Peace Prize from the Soviet Union in 1962.')"></td>
-                                       <td>
-                                           1 July 1960 - 26 February 1966 (deposed)
-                                           <br>
-                                           5 years, 240 days
-                                       </td>
-                                       <td><a class="inner-link">Convention People's Party</a><img src="imgs/CPP_‒_Convention_People's_Party_logo.jpg" class="hide"></td>
                                    </tr>
                                </table>
                                <h2>Military rule (1966–1969)</h2>
@@ -495,11 +484,25 @@
                 pm:'Nkrumah'
             }
         ]
+
+        const FirstRepublic = [
+            {
+                No:'2',
+                name:'Kwame Nkrumah',
+                potrait:'imgs/3f50eec35ff0f6ab0a9984b6926249c7.jpg',
+                term:'1 July 1960 - 26 February 1966 (deposed)',
+                length:' 5 years, 240 days',
+                description:'Osagyefo Kwame Nkrumah, was a Ghanaian politician, political theorist, and revolutionary. He was the first Prime Minister and President of Ghana, having led the Gold Coast to independence from Britain in 1957. An influential espouser of Pan-Africanism, Nkrumah was a founding member of the Organization of African Unity and winner of the Lenin Peace Prize from the Soviet Union in 1962.',
+                party:'Convention People\'s Party' ,
+                image:'imgs/CPP_‒_Convention_People\'s_Party_logo.jpg' 
+            }
+        ]
          // Document Event Listener
          document.addEventListener('DOMContentLoaded', () => {
             const executive = document.querySelector('#executive_table'),
                   monarch = document.querySelector('#monarchy_table'),
-                  governer = document.querySelector('#governor_general')
+                  governer = document.querySelector('#governor_general'),
+                  first_republic = document.querySelector('#First-Republic')
 
             executive_branch.forEach( element => {
                 executive.innerHTML += `
@@ -545,6 +548,24 @@
                 </tr> 
                 `
             })
+
+            FirstRepublic.forEach(element => {
+                first_republic.innerHTML += `
+                <tr>
+                    <td>${element.No}</td>
+                    <td>${element.name}</td>
+                    <td><img src="${element.potrait}" onclick="openFullImg(this.src, '${element.description}')"></td>
+                    <td>
+                        ${element.term}
+                        <br>
+                        ${element.length}
+                    </td>
+                    <td><a class="inner-link">${element.party}</a><img src="${element.image}" class="hide"></td>
+                </tr>    
+                `
+            })
+
+            
          })
 
      
